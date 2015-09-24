@@ -8,6 +8,7 @@ alias sls="ls"
 alias la="ls -A"
 
 alias gs="git status -sb"
+alias gclean="git reset --hard && git clean -df"
 
 alias ..="cd .."
 alias ...="cd ../.."
