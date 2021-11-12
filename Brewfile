@@ -23,6 +23,7 @@ cask "aerial"
 cask "appcleaner"
 cask "discord"
 cask "figma"
+cask "firefox"
 cask "fork"
 cask "github"
 cask "iina"
@@ -52,3 +53,4 @@ brew "rust"
 # Not in cask or MAS:
 #  - Hopper Disassembler
 #  - MacSymbolicator
+#  - TinkerTool
