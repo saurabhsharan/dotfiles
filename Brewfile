@@ -5,6 +5,7 @@ cask_args appdir: "/Applications"
 
 brew "mas"
 
+mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
 mas "DevCleaner for Xcode", id: 1388020431
@@ -18,30 +19,34 @@ mas "XCOrganizer", id: 1507556912
 
 # cask "1Password" - actually, maybe bad idea to install 1P via cask
 cask "aerial"
-# cask "airbuddy"
-# cask "alfred"
+cask "airbuddy"
+cask "alfred"
 cask "appcleaner"
+cask "contexts"
 cask "discord"
 cask "figma"
 cask "firefox"
 cask "fork"
 cask "github"
+cask "google-chrome"
 cask "iina"
 cask "imageoptim"
 cask "iterm2"
 cask "launchcontrol"
 cask "macvim"
-# cask "mimestream"
+cask "mimestream"
 cask "monodraw"
+cask "moom"
 cask "notion"
 cask "omnidisksweeper"
-# cask "netnewswire"
+cask "netnewswire"
 cask "selfcontrol"
 cask "sf-symbols"
-# cask "spotify"
+cask "spotify"
+cask "stats"
 cask "syntax-highlight"
 cask "textmate"
-# cask "visual-studio-code"
+cask "visual-studio-code"
 cask "zoom"
 
 brew "clojure"
