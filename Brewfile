@@ -60,6 +60,7 @@ cask 'font-fantasque-sans-mono'
 brew "clojure"
 brew "fish"
 brew "node"
+brew "openjdk"
 # Seems better to use rustup
 # brew "rust"
 
