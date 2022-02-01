@@ -9,6 +9,7 @@ brew "mas"
 mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
+mas "Charmstone", id: 1563735522
 mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
 mas "Kindle", id: 405399194
