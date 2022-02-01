@@ -1,4 +1,5 @@
 # Place in ~/ and run `brew bundle install`
+#  Note that will require sudo password entry when installing sf-symbols cask
 # Partially based on https://gist.github.com/cliss/74782128b9a35366ecac44a7c4b45752
 
 cask_args appdir: "/Applications"
