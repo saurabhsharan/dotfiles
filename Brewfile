@@ -9,7 +9,6 @@ mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
 mas "DevCleaner for Xcode", id: 1388020431
-mas "Flycut (Clipboard manager)", id: 442160987
 mas "Icon Set Creator", id: 939343785
 mas "Kindle", id: 405399194
 mas "Messenger", id: 1480068668
