@@ -52,6 +52,7 @@ cask "syntax-highlight"
 cask "table-tool"
 cask "textmate"
 cask "visual-studio-code"
+cask "xcodes"
 cask "zoom"
 
 tap 'homebrew/cask-fonts'
