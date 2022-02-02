@@ -71,6 +71,11 @@ brew "the_silver_searcher"
 # Seems better to use rustup
 # brew "rust"
 
+# chip design packages
+brew "gtkwave"
+brew "icarus-verilog"
+brew "yosys"
+
 
 # Not in cask or MAS:
 #  - Hopper Disassembler
