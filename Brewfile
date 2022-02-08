@@ -22,6 +22,7 @@ mas "XCOrganizer", id: 1507556912
 cask "aerial"
 cask "airbuddy"
 cask "alfred"
+cask "anki"
 cask "appcleaner"
 cask "asset-catalog-tinkerer"
 cask "bartender"
