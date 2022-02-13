@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+  ul = push -u origin HEAD
+[core]
+	precomposeUnicode = true
+[init]
+	defaultBranch = main
+[diff]
+	noprefix = true
