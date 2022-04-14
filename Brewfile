@@ -65,17 +65,24 @@ tap 'homebrew/cask-fonts'
 cask 'font-fantasque-sans-mono'
 
 brew "clojure"
+brew "dog"
 brew "fish"
+brew "git-recent"
 brew "leiningen"
 brew "node"
 brew "openjdk"
 brew "the_silver_searcher"
+brew "youtube-dl"
 # Seems better to use rustup
 # brew "rust"
 
 # chip design packages
 brew "gtkwave"
 brew "icarus-verilog"
+brew "sdl2"
+brew "sdl2_gfx"
+brew "sdl2_image"
+brew "verilator"
 brew "yosys"
 
 
