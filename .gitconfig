@@ -1,13 +1,31 @@
 [filter "lfs"]
+	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
-[alias]
-  ul = push -u origin HEAD
-[core]
-	precomposeUnicode = true
+[user]
+	name = Saurabh Sharan
+	email = saurabh.sharan1@gmail.com
 [init]
 	defaultBranch = main
+[alias]
+	last = log -1 HEAD
+	ul = push -u origin HEAD
+	# via https://www.jessesquires.com/blog/2021/10/24/git-aliases-to-improve-productivity/
+	aliases = "!f() { git config --global -l | grep alias | sort; }; f"
+	br = branch
+	dif = diff
+	st = status
+	fa = fetch --all
+	pus = push
+	pu = push
+	smartlog = log --graph --pretty=format:'commit: %C(bold red)%h%Creset %C(red)<%H>%Creset %C(bold magenta)%d %Creset%ndate: %C(bold yellow)%cd %Creset%C(yellow)%cr%Creset%nauthor: %C(bold blue)%an%Creset %C(blue)<%ae>%Creset%n%C(cyan)%s%n%Creset'
+	nuke = reset --hard
+	ls = log --oneline
+	# recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+[format]
+	pretty = oneline
+[log]
+	decorate = short
 [diff]
 	noprefix = true
