@@ -29,3 +29,5 @@
 	decorate = short
 [diff]
 	noprefix = true
+[pull]
+	ff = only
