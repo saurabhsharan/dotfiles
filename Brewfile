@@ -75,6 +75,7 @@ brew "leiningen"
 brew "node"
 brew "openjdk"
 brew "the_silver_searcher"
+brew "tldr"
 brew "youtube-dl"
 # Seems better to use rustup
 # brew "rust"
