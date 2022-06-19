@@ -14,6 +14,7 @@ mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
 mas "Kindle", id: 405399194
 mas "Messenger", id: 1480068668
+mas "Play: Save Videos Watch Later", id: 1596506190
 mas "Plug for Hype Machine", id: 1514182074
 mas "Slack for Desktop", id: 803453959
 mas "XCOrganizer", id: 1507556912
