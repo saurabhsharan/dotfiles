@@ -8,6 +8,8 @@ end
 
 alias g="git"
 alias gs="git status -sb"
+alias gcd="git clone --depth 1"
+alias git-my-branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | grep -i saurabh"
 
 alias ls-dir="ls -d */"
 alias lsd="ls-dir"
