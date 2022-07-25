@@ -12,11 +12,15 @@ mas "Battery Monitor: Health, Info", id: 836505650
 mas "Charmstone", id: 1563735522
 mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
+mas "Keyword Search", id: 1558453954
 mas "Kindle", id: 405399194
+mas "Mactracker", id: 430255202
 mas "Messenger", id: 1480068668
+mas "Octotree", id: 1457450145 
 mas "Play: Save Videos Watch Later", id: 1596506190
 mas "Plug for Hype Machine", id: 1514182074
 mas "Slack for Desktop", id: 803453959
+mas "Vimari", id: 1480933944
 mas "XCOrganizer", id: 1507556912
 
 # cask "1Password" - actually, maybe bad idea to install 1P via cask
@@ -28,7 +32,9 @@ cask "appcleaner"
 cask "asset-catalog-tinkerer"
 cask "authy"
 cask "bartender"
+cask "blender"
 cask "cirrus"
+cask "cleanshot"
 cask "coconutbattery"
 cask "contexts"
 cask "discord"
