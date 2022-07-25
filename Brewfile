@@ -92,9 +92,15 @@ brew "sdl2_image"
 brew "verilator"
 # from https://www.twam.info/software/using-the-icebreaker-with-an-open-source-fpga-toolchain-on-os-x
 brew tap "twam/openfpga"
-brew "yosys"
 brew install "icestorm"
 brew install "nextpnr" --without-arch-ecp5
+
+brew "yosys"
+# dependencies needed for yosys
+brew "readline"
+brew "minisat"
+brew "xdot"
+brew "graphviz"
 
 
 # Not in cask or MAS:
