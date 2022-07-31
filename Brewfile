@@ -13,13 +13,8 @@ mas "Charmstone", id: 1563735522
 mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
 mas "Keyword Search", id: 1558453954
-mas "Kindle", id: 405399194
-mas "Mactracker", id: 430255202
-mas "Messenger", id: 1480068668
 mas "Octotree", id: 1457450145 
 mas "Play: Save Videos Watch Later", id: 1596506190
-mas "Plug for Hype Machine", id: 1514182074
-mas "Slack for Desktop", id: 803453959
 mas "Vimari", id: 1480933944
 mas "XCOrganizer", id: 1507556912
 
@@ -47,12 +42,15 @@ cask "iina"
 cask "imageoptim"
 cask "insomnia"
 cask "iterm2"
+cask "kindle"
 cask "keyboard-maestro"
 cask "launchcontrol"
+cask "mactracker"
 cask "macvim"
 cask "maestral"
 cask "marta"
 cask "meetingbar"
+cask "messenger"
 cask "mimestream"
 cask "mochi"
 cask "monodraw"
@@ -61,9 +59,11 @@ cask "netnewswire"
 cask "notion"
 cask "omnidisksweeper"
 cask "pdf-squeezer"
+cask "plug"
 cask "responsively"
 cask "selfcontrol"
 cask "sf-symbols"
+cask "slack"
 cask "soulver"
 cask "spotify"
 cask "stats"
