@@ -99,9 +99,9 @@ brew "sdl2_gfx"
 brew "sdl2_image"
 brew "verilator"
 # from https://www.twam.info/software/using-the-icebreaker-with-an-open-source-fpga-toolchain-on-os-x
-brew tap "twam/openfpga"
-brew install "icestorm"
-brew install "nextpnr" --without-arch-ecp5
+tap "twam/openfpga"
+brew "icestorm"
+brew "nextpnr", args: ["--without-arch-ecp5"]
 
 brew "yosys"
 # dependencies needed for yosys
