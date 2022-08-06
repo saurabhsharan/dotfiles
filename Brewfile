@@ -71,6 +71,7 @@ cask "syntax-highlight"
 cask "table-tool"
 cask "textmate"
 cask "visual-studio-code"
+cask "wordservice"
 cask "xcodes"
 cask "zoom"
 
