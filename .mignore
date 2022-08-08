@@ -1,0 +1,11 @@
+# This file must be located in the top-level Dropbox folder
+# Be careful when adding new directories as .mignore patterns are global
+
+node_modules/
+
+# parcel build output dirs
+dist/
+.parcel-cache/
+
+# vim backup files
+*.swp
