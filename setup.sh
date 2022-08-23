@@ -49,6 +49,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Make crash reports appear as notifications
 defaults write com.apple.CrashReporter UseUNC 1
 
+# Xcode defaults configuration
+defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -float 0.0
+
 # Restart processes
 killall Dock
 killall Finder
