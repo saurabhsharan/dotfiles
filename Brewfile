@@ -9,6 +9,7 @@ brew "mas"
 mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
+mas "Base - SQLite Editor", id: 402383384
 mas "Charmstone", id: 1563735522
 mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
@@ -28,6 +29,7 @@ cask "asset-catalog-tinkerer"
 cask "authy"
 cask "bartender"
 cask "blender"
+cask "boop"
 cask "cirrus"
 cask "cleanshot"
 cask "coconutbattery"
@@ -81,13 +83,17 @@ tap 'homebrew/cask-fonts'
 cask 'font-fantasque-sans-mono'
 
 brew "clojure"
+brew "cloudflared"
+brew "cmake"
 brew "dog"
+brew "eska"
 brew "fish"
 brew "git-recent"
 brew "jq"
 brew "leiningen"
 brew "node"
 brew "openjdk"
+brew "protobuf"
 brew "the_silver_searcher"
 brew "tldr"
 brew "wget"
