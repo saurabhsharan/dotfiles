@@ -14,6 +14,605 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
+						<integer>2739</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>ExecuteOrEdit</key>
+						<string>Execute</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShortcut</string>
+						<key>Shortcut</key>
+						<string>Connect to AirPods Pro</string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677722575.72844005</real>
+				<key>ModificationDate</key>
+				<real>677722628.03654802</real>
+				<key>Name</key>
+				<string>Connect to AirPods Pro</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>80</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>286BF8F1-AB76-44D0-8665-4CFFBBD6CCF8</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8040</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.kapeli.dashdoc</string>
+							<key>Name</key>
+							<string>Dash</string>
+							<key>NewFile</key>
+							<string>/Applications/Dash.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8797</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.reminders</string>
+							<key>Name</key>
+							<string>Reminders</string>
+							<key>NewFile</key>
+							<string>/System/Applications/Reminders.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8798</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>fm.overcast.overcast</string>
+							<key>Name</key>
+							<string>Overcast</string>
+							<key>NewFile</key>
+							<string>/Applications/Overcast.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8799</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.spotify.client</string>
+							<key>Name</key>
+							<string>Spotify</string>
+							<key>NewFile</key>
+							<string>/Applications/Spotify.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8800</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.finder</string>
+							<key>Name</key>
+							<string>Finder</string>
+							<key>NewFile</key>
+							<string>/System/Library/CoreServices/Finder.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8801</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.tinyspeck.slackmacgap</string>
+							<key>Name</key>
+							<string>Slack</string>
+							<key>NewFile</key>
+							<string>/Applications/Slack.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8041</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.insomnia.app</string>
+							<key>Name</key>
+							<string>Insomnia</string>
+							<key>NewFile</key>
+							<string>/Applications/Insomnia.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8042</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.DanPristupov.Fork</string>
+							<key>Name</key>
+							<string>Fork</string>
+							<key>NewFile</key>
+							<string>/Applications/Fork.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8043</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>at.eggerapps.Postico</string>
+							<key>Name</key>
+							<string>Postico 2</string>
+							<key>NewFile</key>
+							<string>/Applications/Postico 2.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8044</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.spotify.client</string>
+							<key>Name</key>
+							<string>Spotify</string>
+							<key>NewFile</key>
+							<string>/Applications/Spotify.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8419</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.saurabhsharan.MacRoamViewerSwiftUI</string>
+							<key>Name</key>
+							<string>MacRoamViewerSwiftUI</string>
+							<key>NewFile</key>
+							<string>~/Library/Developer/Xcode/DerivedData/Roam-Viewer-SwiftUI-erhjoymfofgcldbcbeghaojhkqha/Build/Products/Debug/MacRoamViewerSwiftUI.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8420</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.Notes</string>
+							<key>Name</key>
+							<string>Notes</string>
+							<key>NewFile</key>
+							<string>/System/Applications/Notes.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>8421</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.TextEdit</string>
+							<key>Name</key>
+							<string>TextEdit</string>
+							<key>NewFile</key>
+							<string>/System/Applications/TextEdit.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>10678</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.linear</string>
+							<key>Name</key>
+							<string>Linear</string>
+							<key>NewFile</key>
+							<string>/Applications/Linear.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>11429</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.facebook.archon</string>
+							<key>Name</key>
+							<string>Messenger</string>
+							<key>NewFile</key>
+							<string>/Applications/Messenger.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>HideSpecificApp</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>689485508.91031206</real>
+				<key>ModificationDate</key>
+				<real>690150535.24436104</real>
+				<key>Name</key>
+				<string>Hide Secondary Applications</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>64</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>82D758CB-8BAB-4FF2-A2BE-A4C5C985BC8E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>2364</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Hide</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.spotify.client</string>
+							<key>Name</key>
+							<string>Spotify</string>
+							<key>NewFile</key>
+							<string>/Applications/Spotify.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677718188.92241597</real>
+				<key>ModificationDate</key>
+				<real>690092692.32463205</real>
+				<key>Name</key>
+				<string>Activate Spotify</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>113</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>103</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>0EEBCAEA-CAFC-4EA8-84BA-211B0F6CF128</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>1990</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.roam-research.desktop-app</string>
+							<key>Name</key>
+							<string>Roam Research</string>
+							<key>NewFile</key>
+							<string>/Applications/Roam Research.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677717302.97967398</real>
+				<key>ModificationDate</key>
+				<real>681700583.61926603</real>
+				<key>Name</key>
+				<string>Activate Roam</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>107</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>109</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>BAE01ECE-1EAE-410F-96AF-E2095EE1EBFE</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>1989</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>SwitchToLast</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.Safari</string>
+							<key>Name</key>
+							<string>Safari</string>
+							<key>NewFile</key>
+							<string>/Applications/Safari.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>5035</integer>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.google.Chrome</string>
+										<key>Name</key>
+										<string>Google Chrome</string>
+										<key>NewFile</key>
+										<string>/Applications/Google Chrome.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>Active</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>FrontWindow</string>
+									<key>FrontWindowConditionType</key>
+									<string>DoesNotExist</string>
+									<key>IsFrontApplication</key>
+									<true/>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>IsActive</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>5036</integer>
+								<key>Argument</key>
+								<string></string>
+								<key>Command</key>
+								<string>NewWindow</string>
+								<key>MacroActionType</key>
+								<string>SafariControl</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>WebBrowser</key>
+								<string>Google Chrome</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677717238.50539505</real>
+				<key>ModificationDate</key>
+				<real>690090729.70621502</real>
+				<key>Name</key>
+				<string>Activate Browser</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>105</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>C3F13ACA-18A0-4E83-92EB-61FEE3DEE96F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
 						<integer>3492</integer>
 						<key>IsDisclosed</key>
 						<false/>
@@ -63,7 +662,7 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>4615</integer>
+						<integer>5790</integer>
 						<key>KeyCode</key>
 						<integer>19</integer>
 						<key>MacroActionType</key>
@@ -79,9 +678,9 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>677883586.80978799</real>
+				<real>678335826.19703901</real>
 				<key>ModificationDate</key>
-				<real>677883599.36752403</real>
+				<real>678335852.74651206</real>
 				<key>Name</key>
 				<string>Switch to Space 2</string>
 				<key>Triggers</key>
@@ -90,7 +689,7 @@
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>84</integer>
+						<integer>97</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -98,7 +697,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>49E3DD1D-F1F5-4604-A134-DA9D367430C4</string>
+				<string>59811162-4B6E-453E-9BBA-96450E3FEC67</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -120,37 +719,196 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>4240</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.apple.finder</string>
-							<key>Name</key>
-							<string>Finder</string>
-							<key>NewFile</key>
-							<string>/System/Library/CoreServices/Finder.app</string>
-						</dict>
-						<key>IsDefaultApplication</key>
+						<integer>9178</integer>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
 						<false/>
 						<key>MacroActionType</key>
-						<string>Open1File</string>
+						<string>ExecuteShellScript</string>
 						<key>Path</key>
-						<string>~/Downloads</string>
+						<string>~/Desktop/paste.py</string>
+						<key>Source</key>
+						<string>Clipboard</string>
+						<key>Text</key>
+						<string>#!/usr/bin/env python3
+
+import sys
+
+inp = sys.stdin.read()
+print(inp)</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<false/>
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>677780783.02854896</real>
+				<real>690078248.89419997</real>
 				<key>ModificationDate</key>
-				<real>677780812.11709499</real>
+				<real>690079424.74889505</real>
 				<key>Name</key>
-				<string>Open Downloads folder in Finder</string>
+				<string>Paste without URLs</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>2</integer>
+						<integer>9</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>2816</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>AF62A2D1-789B-4AEE-BB87-AABDADF1D2C8</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>7664</integer>
+						<key>KeyCode</key>
+						<integer>21</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>689051431.46082306</real>
+				<key>ModificationDate</key>
+				<real>690093325.32531703</real>
+				<key>Name</key>
+				<string>Switch to Space 4</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>86</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>5ED2F7AB-6CE0-4084-9ACA-F72FF36D370A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>1614</integer>
+						<key>Argument</key>
+						<string></string>
+						<key>Command</key>
+						<string>NewWindow</string>
+						<key>MacroActionType</key>
+						<string>SafariControl</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>WebBrowser</key>
+						<string>Safari</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>SelectWindow</string>
+						<key>ActionUID</key>
+						<integer>1615</integer>
+						<key>HeightExpression</key>
+						<string>300</string>
+						<key>HorizontalExpression</key>
+						<string>125</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.Safari</string>
+							<key>Name</key>
+							<string>Safari</string>
+							<key>NewFile</key>
+							<string>/Applications/Safari.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>125</string>
+						<key>WidthExpression</key>
+						<string>300</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677016710.25634599</real>
+				<key>IsActive</key>
+				<false/>
+				<key>ModificationDate</key>
+				<real>677016780.64054096</real>
+				<key>Name</key>
+				<string>New Safari window</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>1</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
@@ -158,7 +916,7 @@
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>2301FD35-86FB-4DD0-96FF-34048E81020C</string>
+				<string>57D7D15F-0C72-4FDB-B953-7AC2D21EF027</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -180,305 +938,7 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>1989</integer>
-						<key>AllWindows</key>
-						<false/>
-						<key>AlreadyActivatedActionType</key>
-						<string>SwitchToLast</string>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.google.Chrome</string>
-							<key>Name</key>
-							<string>Google Chrome</string>
-							<key>NewFile</key>
-							<string>/Applications/Google Chrome.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>ActivateApplication</string>
-						<key>ReopenWindows</key>
-						<false/>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>ActionUID</key>
-						<integer>5035</integer>
-						<key>Conditions</key>
-						<dict>
-							<key>ConditionList</key>
-							<array>
-								<dict>
-									<key>Application</key>
-									<dict>
-										<key>BundleIdentifier</key>
-										<string>com.google.Chrome</string>
-										<key>Name</key>
-										<string>Google Chrome</string>
-										<key>NewFile</key>
-										<string>/Applications/Google Chrome.app</string>
-									</dict>
-									<key>ApplicationConditionType</key>
-									<string>Active</string>
-									<key>ConditionType</key>
-									<string>Application</string>
-								</dict>
-								<dict>
-									<key>ConditionType</key>
-									<string>FrontWindow</string>
-									<key>FrontWindowConditionType</key>
-									<string>DoesNotExist</string>
-									<key>IsFrontApplication</key>
-									<true/>
-								</dict>
-							</array>
-							<key>ConditionListMatch</key>
-							<string>All</string>
-						</dict>
-						<key>ElseActions</key>
-						<array/>
-						<key>MacroActionType</key>
-						<string>IfThenElse</string>
-						<key>ThenActions</key>
-						<array>
-							<dict>
-								<key>ActionUID</key>
-								<integer>5036</integer>
-								<key>Argument</key>
-								<string></string>
-								<key>Command</key>
-								<string>NewWindow</string>
-								<key>MacroActionType</key>
-								<string>SafariControl</string>
-								<key>TimeOutAbortsMacro</key>
-								<true/>
-								<key>WebBrowser</key>
-								<string>Google Chrome</string>
-							</dict>
-						</array>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677717238.50539505</real>
-				<key>ModificationDate</key>
-				<real>677981178.83044302</real>
-				<key>Name</key>
-				<string>Activate Chrome</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>105</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>C3F13ACA-18A0-4E83-92EB-61FEE3DEE96F</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>3490</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.apple.reminders</string>
-							<key>Name</key>
-							<string>Reminders</string>
-							<key>NewFile</key>
-							<string>/System/Applications/Reminders.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>HideSpecificApp</string>
-					</dict>
-					<dict>
-						<key>ActionUID</key>
-						<integer>3487</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>fm.overcast.overcast</string>
-							<key>Name</key>
-							<string>Overcast</string>
-							<key>NewFile</key>
-							<string>/Applications/Overcast.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>HideSpecificApp</string>
-					</dict>
-					<dict>
-						<key>ActionUID</key>
-						<integer>3489</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.spotify.client</string>
-							<key>Name</key>
-							<string>Spotify</string>
-							<key>NewFile</key>
-							<string>/Applications/Spotify.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>HideSpecificApp</string>
-					</dict>
-					<dict>
-						<key>ActionUID</key>
-						<integer>3491</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.apple.finder</string>
-							<key>Name</key>
-							<string>Finder</string>
-							<key>NewFile</key>
-							<string>/System/Library/CoreServices/Finder.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>HideSpecificApp</string>
-					</dict>
-					<dict>
-						<key>ActionUID</key>
-						<integer>3866</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.tinyspeck.slackmacgap</string>
-							<key>Name</key>
-							<string>Slack</string>
-							<key>NewFile</key>
-							<string>/Applications/Slack.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>HideSpecificApp</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677737456.306916</real>
-				<key>ModificationDate</key>
-				<real>677777048.12143099</real>
-				<key>Name</key>
-				<string>Hide "Secondary" Applications</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>64</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>82761EA4-1CDC-4372-BFF3-4D0BA3C9149F</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>484</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.microsoft.VSCode</string>
-							<key>Name</key>
-							<string>Visual Studio Code</string>
-							<key>NewFile</key>
-							<string>/Applications/Visual Studio Code.app</string>
-						</dict>
-						<key>IsDefaultApplication</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>Open1File</string>
-						<key>Path</key>
-						<string>~/work/ondo/protocol-dev</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>664524976.587695</real>
-				<key>ModificationDate</key>
-				<real>667794761.507635</real>
-				<key>Name</key>
-				<string>Open protocol-dev vscode</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>31</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>F2C18049-25AE-4E59-BB76-363552C5F047</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>1990</integer>
+						<integer>481</integer>
 						<key>AllWindows</key>
 						<true/>
 						<key>AlreadyActivatedActionType</key>
@@ -499,56 +959,15 @@
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677717302.97967398</real>
-				<key>ModificationDate</key>
-				<real>677717318.30807304</real>
-				<key>Name</key>
-				<string>Activate Roam</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>107</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>BAE01ECE-1EAE-410F-96AF-E2095EE1EBFE</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>4614</integer>
+						<integer>485</integer>
 						<key>KeyCode</key>
-						<integer>18</integer>
+						<integer>32</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
-						<integer>4096</integer>
+						<integer>256</integer>
 						<key>ReleaseAll</key>
 						<false/>
 						<key>TargetApplication</key>
@@ -558,87 +977,26 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>677883512.52864206</real>
+				<real>664524587.45238805</real>
 				<key>ModificationDate</key>
-				<real>677883574.34859002</real>
+				<real>677717234.88480496</real>
 				<key>Name</key>
-				<string>Switch to Space 1</string>
+				<string>Activate Roam and Search</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>83</integer>
+						<integer>15</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>4352</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>866F40B1-8B3A-4B04-A676-315EC4F35643</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>2739</integer>
-						<key>DisplayKind</key>
-						<string>None</string>
-						<key>ExecuteOrEdit</key>
-						<string>Execute</string>
-						<key>IncludeStdErr</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteShortcut</string>
-						<key>Shortcut</key>
-						<string>Connect to AirPods Pro</string>
-						<key>Source</key>
-						<string>Nothing</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677722575.72844005</real>
-				<key>ModificationDate</key>
-				<real>677722628.03654802</real>
-				<key>Name</key>
-				<string>Connect to AirPods Pro</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>80</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>286BF8F1-AB76-44D0-8665-4CFFBBD6CCF8</string>
+				<string>F0484CE5-552E-46FA-AC69-44C2D1180A61</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -787,213 +1145,6 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>1614</integer>
-						<key>Argument</key>
-						<string></string>
-						<key>Command</key>
-						<string>NewWindow</string>
-						<key>MacroActionType</key>
-						<string>SafariControl</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>WebBrowser</key>
-						<string>Safari</string>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>SelectWindow</string>
-						<key>ActionUID</key>
-						<integer>1615</integer>
-						<key>HeightExpression</key>
-						<string>300</string>
-						<key>HorizontalExpression</key>
-						<string>125</string>
-						<key>MacroActionType</key>
-						<string>ManipulateWindow</string>
-						<key>TargetApplication</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.apple.Safari</string>
-							<key>Name</key>
-							<string>Safari</string>
-							<key>NewFile</key>
-							<string>/Applications/Safari.app</string>
-						</dict>
-						<key>Targeting</key>
-						<string>FrontWindow</string>
-						<key>TargetingType</key>
-						<string>Specific</string>
-						<key>VerticalExpression</key>
-						<string>125</string>
-						<key>WidthExpression</key>
-						<string>300</string>
-						<key>WindowIndexExpression</key>
-						<string>2</string>
-						<key>WindowName</key>
-						<string></string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677016710.25634599</real>
-				<key>ModificationDate</key>
-				<real>677016780.64054096</real>
-				<key>Name</key>
-				<string>New Safari window</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>1</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>57D7D15F-0C72-4FDB-B953-7AC2D21EF027</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>5790</integer>
-						<key>KeyCode</key>
-						<integer>19</integer>
-						<key>MacroActionType</key>
-						<string>SimulateKeystroke</string>
-						<key>Modifiers</key>
-						<integer>4096</integer>
-						<key>ReleaseAll</key>
-						<false/>
-						<key>TargetApplication</key>
-						<dict/>
-						<key>TargetingType</key>
-						<string>Front</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>678335826.19703901</real>
-				<key>ModificationDate</key>
-				<real>678335852.74651206</real>
-				<key>Name</key>
-				<string>Switch to Space 2</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>97</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>59811162-4B6E-453E-9BBA-96450E3FEC67</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>483</integer>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.google.Chrome</string>
-							<key>Name</key>
-							<string>Google Chrome</string>
-							<key>NewFile</key>
-							<string>/Applications/Google Chrome.app</string>
-						</dict>
-						<key>IsDefaultApplication</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>OpenURL</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>URL</key>
-						<string>https://www.github.com/ondoprotocol/protocol-dev</string>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>664524895.41471601</real>
-				<key>ModificationDate</key>
-				<real>664527939.19742501</real>
-				<key>Name</key>
-				<string>Open protocol-dev repo</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>31</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>6400</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>9E4301BF-48FD-4000-9E43-16B4AEAC8569</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
 						<integer>5414</integer>
 						<key>KeyCode</key>
 						<integer>20</integer>
@@ -1012,7 +1163,7 @@
 				<key>CreationDate</key>
 				<real>678242841.25782502</real>
 				<key>ModificationDate</key>
-				<real>678242851.91048098</real>
+				<real>690093322.44555104</real>
 				<key>Name</key>
 				<string>Switch to Space 3</string>
 				<key>Triggers</key>
@@ -1025,7 +1176,7 @@
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>4096</integer>
 					</dict>
 				</array>
 				<key>UID</key>
@@ -1051,113 +1202,45 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>3113</integer>
-						<key>AllWindows</key>
-						<true/>
-						<key>AlreadyActivatedActionType</key>
-						<string>SwitchToLast</string>
+						<integer>4240</integer>
 						<key>Application</key>
 						<dict>
 							<key>BundleIdentifier</key>
-							<string>com.apple.reminders</string>
+							<string>com.apple.finder</string>
 							<key>Name</key>
-							<string>Reminders</string>
+							<string>Finder</string>
 							<key>NewFile</key>
-							<string>/System/Applications/Reminders.app</string>
+							<string>/System/Library/CoreServices/Finder.app</string>
 						</dict>
-						<key>MacroActionType</key>
-						<string>ActivateApplication</string>
-						<key>ReopenWindows</key>
+						<key>IsDefaultApplication</key>
 						<false/>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
+						<key>MacroActionType</key>
+						<string>Open1File</string>
+						<key>Path</key>
+						<string>~/Downloads</string>
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>677737388.60623395</real>
+				<real>677780783.02854896</real>
 				<key>ModificationDate</key>
-				<real>677737414.85830402</real>
+				<real>677780812.11709499</real>
 				<key>Name</key>
-				<string>Activate Reminder (fn)</string>
+				<string>Open Downloads folder in Finder</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>106</integer>
+						<integer>2</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>6400</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>EFF645CE-C837-4D58-B041-8301719C9C6A</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Saurabh Macros</string>
-		<key>ToggleMacroUID</key>
-		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
-		<key>UID</key>
-		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>664524581.75906301</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>ActionUID</key>
-						<integer>2364</integer>
-						<key>AllWindows</key>
-						<true/>
-						<key>AlreadyActivatedActionType</key>
-						<string>SwitchToLast</string>
-						<key>Application</key>
-						<dict>
-							<key>BundleIdentifier</key>
-							<string>com.spotify.client</string>
-							<key>Name</key>
-							<string>Spotify</string>
-							<key>NewFile</key>
-							<string>/Applications/Spotify.app</string>
-						</dict>
-						<key>MacroActionType</key>
-						<string>ActivateApplication</string>
-						<key>ReopenWindows</key>
-						<false/>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>677718188.92241597</real>
-				<key>ModificationDate</key>
-				<real>677718204.77280605</real>
-				<key>Name</key>
-				<string>Activate Spotify</string>
-				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>113</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
-				<key>UID</key>
-				<string>0EEBCAEA-CAFC-4EA8-84BA-211B0F6CF128</string>
+				<string>2301FD35-86FB-4DD0-96FF-34048E81020C</string>
 			</dict>
 		</array>
 		<key>Name</key>
@@ -1319,6 +1402,1196 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
+						<integer>7665</integer>
+						<key>KeyCode</key>
+						<integer>23</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>689392430.04022002</real>
+				<key>ModificationDate</key>
+				<real>690093327.90428805</real>
+				<key>Name</key>
+				<string>Switch to Space 5</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>87</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A0F23E69-F043-4E6A-B37D-D24EF26761A6</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>484</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>IsDefaultApplication</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Open1File</string>
+						<key>Path</key>
+						<string>~/work/ondo/protocol-dev</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>664524976.587695</real>
+				<key>ModificationDate</key>
+				<real>667794761.507635</real>
+				<key>Name</key>
+				<string>Open protocol-dev vscode</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>31</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F2C18049-25AE-4E59-BB76-363552C5F047</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>11804</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>SwitchToLast</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.DanPristupov.Fork</string>
+							<key>Name</key>
+							<string>Fork</string>
+							<key>NewFile</key>
+							<string>/Applications/Fork.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690153991.38068199</real>
+				<key>ModificationDate</key>
+				<real>690154484.01462102</real>
+				<key>Name</key>
+				<string>Activate Fork</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>87</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>656C4547-9BC6-42CA-870E-AB7B90ECE44B</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>7289</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SystemAction</string>
+						<key>SystemAction</key>
+						<string>ActivateScreenSaver</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>687585768.07473302</real>
+				<key>ModificationDate</key>
+				<real>687585792.20439994</real>
+				<key>Name</key>
+				<string>Screensaver</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>1</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>4D4B8738-EAC9-47E5-A188-E7E44D4345C3</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>483</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.google.Chrome</string>
+							<key>Name</key>
+							<string>Google Chrome</string>
+							<key>NewFile</key>
+							<string>/Applications/Google Chrome.app</string>
+						</dict>
+						<key>IsDefaultApplication</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>OpenURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>URL</key>
+						<string>https://www.github.com/ondoprotocol/protocol-dev</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>664524895.41471601</real>
+				<key>ModificationDate</key>
+				<real>664527939.19742501</real>
+				<key>Name</key>
+				<string>Open protocol-dev repo</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>31</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>9E4301BF-48FD-4000-9E43-16B4AEAC8569</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>11053</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Hide</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.facebook.archon</string>
+							<key>Name</key>
+							<string>Messenger</string>
+							<key>NewFile</key>
+							<string>/Applications/Messenger.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690141263.08371603</real>
+				<key>ModificationDate</key>
+				<real>690141284.28854001</real>
+				<key>Name</key>
+				<string>Activate Messenger</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>86</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>35BBD3FD-67F6-4ADE-9A41-F1AAB5055F9D</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>6164</integer>
+						<key>KeyCode</key>
+						<integer>125</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>200704</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>678344811.48306799</real>
+				<key>ModificationDate</key>
+				<real>678344893.21464503</real>
+				<key>Name</key>
+				<string>Activate App Expose</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>82</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>6722A941-F77F-470B-8F93-BEF590EAE387</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>10303</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Hide</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.tinyspeck.slackmacgap</string>
+							<key>Name</key>
+							<string>Slack</string>
+							<key>NewFile</key>
+							<string>/Applications/Slack.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690097011.35912204</real>
+				<key>ModificationDate</key>
+				<real>690097029.82822001</real>
+				<key>Name</key>
+				<string>Activate Slack</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>85</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>3A2F3D2A-685C-45C9-AE4A-95481F8FB793</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9928</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>SwitchToLast</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.figma.Desktop</string>
+							<key>Name</key>
+							<string>Figma</string>
+							<key>NewFile</key>
+							<string>/Applications/Figma.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690093397.44006205</real>
+				<key>ModificationDate</key>
+				<real>690093417.55624497</real>
+				<key>Name</key>
+				<string>Activate Figma</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>84</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>755CD399-8F64-41B0-936B-DF5032F66256</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>4614</integer>
+						<key>KeyCode</key>
+						<integer>18</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677883512.52864206</real>
+				<key>ModificationDate</key>
+				<real>690093313.11399305</real>
+				<key>Name</key>
+				<string>Switch to Space 1</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>83</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>866F40B1-8B3A-4B04-A676-315EC4F35643</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12194</integer>
+						<key>AllWindows</key>
+						<false/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.google.Chrome</string>
+							<key>Name</key>
+							<string>Google Chrome</string>
+							<key>NewFile</key>
+							<string>/Applications/Google Chrome.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12192</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12193</integer>
+								<key>AllWindows</key>
+								<false/>
+								<key>AlreadyActivatedActionType</key>
+								<string>Normal</string>
+								<key>Application</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.google.Chrome</string>
+									<key>Name</key>
+									<string>Google Chrome</string>
+									<key>NewFile</key>
+									<string>/Applications/Google Chrome.app</string>
+								</dict>
+								<key>MacroActionType</key>
+								<string>ActivateApplication</string>
+								<key>ReopenWindows</key>
+								<false/>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>MoveAndClick</string>
+								<key>ActionUID</key>
+								<integer>12188</integer>
+								<key>Button</key>
+								<integer>0</integer>
+								<key>ClickCount</key>
+								<integer>1</integer>
+								<key>DisplayMatches</key>
+								<false/>
+								<key>DragHorizontalPosition</key>
+								<string>0</string>
+								<key>DragVerticalPosition</key>
+								<string>0</string>
+								<key>Fuzz</key>
+								<integer>15</integer>
+								<key>HorizontalPositionExpression</key>
+								<string>15</string>
+								<key>MacroActionType</key>
+								<string>MouseMoveAndClick</string>
+								<key>Modifiers</key>
+								<integer>0</integer>
+								<key>MouseDrag</key>
+								<string>Hold</string>
+								<key>Relative</key>
+								<string>Window</string>
+								<key>RelativeCorner</key>
+								<string>TopLeft</string>
+								<key>RestoreMouseLocation</key>
+								<false/>
+								<key>VerticalPositionExpression</key>
+								<string>5</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12189</integer>
+								<key>KeyCode</key>
+								<integer>18</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>4096</integer>
+								<key>ReleaseAll</key>
+								<false/>
+								<key>TargetApplication</key>
+								<dict/>
+								<key>TargetingType</key>
+								<string>Front</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12196</integer>
+								<key>MacroActionType</key>
+								<string>Pause</string>
+								<key>Time</key>
+								<string>0.5</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>MoveAndClick</string>
+								<key>ActionUID</key>
+								<integer>12190</integer>
+								<key>Button</key>
+								<integer>0</integer>
+								<key>ClickCount</key>
+								<integer>-1</integer>
+								<key>DisplayMatches</key>
+								<false/>
+								<key>DragHorizontalPosition</key>
+								<string>0</string>
+								<key>DragVerticalPosition</key>
+								<string>0</string>
+								<key>Fuzz</key>
+								<integer>15</integer>
+								<key>HorizontalPositionExpression</key>
+								<string>10</string>
+								<key>MacroActionType</key>
+								<string>MouseMoveAndClick</string>
+								<key>Modifiers</key>
+								<integer>0</integer>
+								<key>MouseDrag</key>
+								<string>None</string>
+								<key>Relative</key>
+								<string>Window</string>
+								<key>RelativeCorner</key>
+								<string>TopLeft</string>
+								<key>RestoreMouseLocation</key>
+								<false/>
+								<key>VerticalPositionExpression</key>
+								<string>5</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12199</integer>
+								<key>MacroActionType</key>
+								<string>Pause</string>
+								<key>Time</key>
+								<string>0.5</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12195</integer>
+								<key>KeyCode</key>
+								<integer>19</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>4096</integer>
+								<key>ReleaseAll</key>
+								<false/>
+								<key>TargetApplication</key>
+								<dict/>
+								<key>TargetingType</key>
+								<string>Front</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12197</integer>
+								<key>MacroActionType</key>
+								<string>Pause</string>
+								<key>Time</key>
+								<string>0.5</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12198</integer>
+								<key>AllWindows</key>
+								<false/>
+								<key>AlreadyActivatedActionType</key>
+								<string>Normal</string>
+								<key>Application</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.google.Chrome</string>
+									<key>Name</key>
+									<string>Google Chrome</string>
+									<key>NewFile</key>
+									<string>/Applications/Google Chrome.app</string>
+								</dict>
+								<key>MacroActionType</key>
+								<string>ActivateApplication</string>
+								<key>ReopenWindows</key>
+								<false/>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>12200</integer>
+								<key>MacroActionType</key>
+								<string>Pause</string>
+								<key>Time</key>
+								<string>0.1</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Calculation</string>
+									<key>Text</key>
+									<string>WINDOWCOUNT()&gt;0</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>While</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12201</integer>
+						<key>KeyCode</key>
+						<integer>19</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12202</integer>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>CloseWindow</string>
+						<key>ActionUID</key>
+						<integer>12180</integer>
+						<key>HeightExpression</key>
+						<string>300</string>
+						<key>HorizontalExpression</key>
+						<string>125</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.googlecode.iterm2</string>
+							<key>Name</key>
+							<string>iTerm</string>
+							<key>NewFile</key>
+							<string>/Applications/iTerm.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>125</string>
+						<key>WidthExpression</key>
+						<string>300</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>CloseWindow</string>
+						<key>ActionUID</key>
+						<integer>12187</integer>
+						<key>HeightExpression</key>
+						<string>300</string>
+						<key>HorizontalExpression</key>
+						<string>125</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>125</string>
+						<key>WidthExpression</key>
+						<string>300</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12181</integer>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>IsDefaultApplication</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Open1File</string>
+						<key>Path</key>
+						<string>~/work/ideaflow/thoughtstream-web</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12183</integer>
+						<key>Argument</key>
+						<string>https://github.com/IdeaFlowCo/thoughtstream-web/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc+author%3Asaurabhsharan</string>
+						<key>Command</key>
+						<string>NewWindow</string>
+						<key>MacroActionType</key>
+						<string>SafariControl</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>WebBrowser</key>
+						<string>Google Chrome</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>12182</integer>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.microsoft.VSCode</string>
+										<key>Name</key>
+										<string>Visual Studio Code</string>
+										<key>NewFile</key>
+										<string>/Applications/Visual Studio Code.app</string>
+									</dict>
+									<key>ConditionType</key>
+									<string>FrontWindow</string>
+									<key>FrontWindowConditionType</key>
+									<string>Exists</string>
+									<key>IsFrontApplication</key>
+									<false/>
+								</dict>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.google.Chrome</string>
+										<key>Name</key>
+										<string>Google Chrome</string>
+										<key>NewFile</key>
+										<string>/Applications/Google Chrome.app</string>
+									</dict>
+									<key>ConditionType</key>
+									<string>FrontWindow</string>
+									<key>FrontWindowConditionType</key>
+									<string>Exists</string>
+									<key>IsFrontApplication</key>
+									<false/>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>PauseUntil</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>ActionUID</key>
+						<integer>12185</integer>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Main,MidX)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.microsoft.VSCode</string>
+							<key>Name</key>
+							<string>Visual Studio Code</string>
+							<key>NewFile</key>
+							<string>/Applications/Visual Studio Code.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Main,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>ActionUID</key>
+						<integer>12186</integer>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Main,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.google.Chrome</string>
+							<key>Name</key>
+							<string>Google Chrome</string>
+							<key>NewFile</key>
+							<string>/Applications/Google Chrome.app</string>
+						</dict>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Specific</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Main,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)*50%</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690166798.69550395</real>
+				<key>ModificationDate</key>
+				<real>690174475.24035394</real>
+				<key>Name</key>
+				<string>Launch Ideaflow Workspace</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>83</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>512</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F7D4172E-0707-47C4-A83B-09EEAB213E76</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>3113</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>SwitchToLast</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.reminders</string>
+							<key>Name</key>
+							<string>Reminders</string>
+							<key>NewFile</key>
+							<string>/System/Applications/Reminders.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>677737388.60623395</real>
+				<key>ModificationDate</key>
+				<real>681700599.65798497</real>
+				<key>Name</key>
+				<string>Activate Reminder (fn)</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>106</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>111</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>EFF645CE-C837-4D58-B041-8301719C9C6A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
 						<integer>5788</integer>
 						<key>KeyCode</key>
 						<integer>18</integer>
@@ -1376,19 +2649,19 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>481</integer>
+						<integer>9553</integer>
 						<key>AllWindows</key>
-						<true/>
+						<false/>
 						<key>AlreadyActivatedActionType</key>
 						<string>Normal</string>
 						<key>Application</key>
 						<dict>
 							<key>BundleIdentifier</key>
-							<string>com.roam-research.desktop-app</string>
+							<string>com.microsoft.VSCode</string>
 							<key>Name</key>
-							<string>Roam Research</string>
+							<string>Visual Studio Code</string>
 							<key>NewFile</key>
-							<string>/Applications/Roam Research.app</string>
+							<string>/Applications/Visual Studio Code.app</string>
 						</dict>
 						<key>MacroActionType</key>
 						<string>ActivateApplication</string>
@@ -1397,15 +2670,56 @@
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>690092625.51179695</real>
+				<key>ModificationDate</key>
+				<real>690093333.66329396</real>
+				<key>Name</key>
+				<string>Activate VSCode</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>83</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>0777D04A-21C2-44C1-96F5-6E589E1E3050</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>485</integer>
+						<integer>4615</integer>
 						<key>KeyCode</key>
-						<integer>32</integer>
+						<integer>19</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
-						<integer>256</integer>
+						<integer>4096</integer>
 						<key>ReleaseAll</key>
 						<false/>
 						<key>TargetApplication</key>
@@ -1415,26 +2729,83 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>664524587.45238805</real>
+				<real>677883586.80978799</real>
 				<key>ModificationDate</key>
-				<real>677717234.88480496</real>
+				<real>690093317.82344604</real>
 				<key>Name</key>
-				<string>Activate Roam and Search</string>
+				<string>Switch to Space 2</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>15</integer>
+						<integer>84</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>4352</integer>
+						<integer>4096</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>F0484CE5-552E-46FA-AC69-44C2D1180A61</string>
+				<string>49E3DD1D-F1F5-4604-A134-DA9D367430C4</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Saurabh Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>41D7A844-0AB9-423E-9F9B-422353815014</string>
+		<key>UID</key>
+		<string>DB84AEF0-8CC5-4A19-8A34-256AA669F9C0</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>664524581.75906301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>6540</integer>
+						<key>KeyCode</key>
+						<integer>48</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>768</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>678344955.07540405</real>
+				<key>ModificationDate</key>
+				<real>679589752.52013695</real>
+				<key>Name</key>
+				<string>Switch to previous window</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>69</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A07FF4B5-52D9-4C62-A418-9264367FF26B</string>
 			</dict>
 		</array>
 		<key>Name</key>
