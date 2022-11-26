@@ -1,33 +1,38 @@
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [user]
-	name = Saurabh Sharan
-	email = saurabh.sharan1@gmail.com
+  name = Saurabh Sharan
+  email = saurabh.sharan1@gmail.com
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [alias]
-	last = log -1 HEAD
-	ul = push -u origin HEAD
-	# via https://www.jessesquires.com/blog/2021/10/24/git-aliases-to-improve-productivity/
-	aliases = "!f() { git config --global -l | grep alias | sort; }; f"
-	br = branch
-	dif = diff
-	st = status
-	fa = fetch --all
-	pus = push
-	pu = push
-	smartlog = log --graph --pretty=format:'commit: %C(bold red)%h%Creset %C(red)<%H>%Creset %C(bold magenta)%d %Creset%ndate: %C(bold yellow)%cd %Creset%C(yellow)%cr%Creset%nauthor: %C(bold blue)%an%Creset %C(blue)<%ae>%Creset%n%C(cyan)%s%n%Creset'
-	nuke = reset --hard
-	ls = log --oneline
-	# recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+  last = log -1 HEAD
+  ul = push -u origin HEAD
+  # via https://www.jessesquires.com/blog/2021/10/24/git-aliases-to-improve-productivity/
+  aliases = "!f() { git config --global -l | grep alias | sort; }; f"
+  br = branch
+  dif = diff
+  st = status
+  fa = fetch --all
+  pus = push
+  pu = push
+  smartlog = log --graph --pretty=format:'commit: %C(bold red)%h%Creset %C(red)<%H>%Creset %C(bold magenta)%d %Creset%ndate: %C(bold yellow)%cd %Creset%C(yellow)%cr%Creset%nauthor: %C(bold blue)%an%Creset %C(blue)<%ae>%Creset%n%C(cyan)%s%n%Creset'
+  nuke = reset --hard
+  ls = log --oneline
+  # recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 [format]
-	pretty = oneline
+  pretty = oneline
 [log]
-	decorate = short
+  decorate = short
+  pretty = oneline
 [diff]
-	noprefix = true
+  noprefix = true
 [pull]
-	ff = only
+  ff = only
+[push]
+  autoSetupRemote = true
+[core]
+  excludesfile = /Users/saurabh/.gitignore
