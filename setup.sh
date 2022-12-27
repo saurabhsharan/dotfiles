@@ -51,6 +51,7 @@ defaults write com.apple.CrashReporter UseUNC 1
 
 # Xcode defaults configuration
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -float 0.0
+defaults write com.apple.dt.Xcode XcodeCloudUpsellPromptEnabled -bool false
 
 # Restart processes
 killall Dock
