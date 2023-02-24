@@ -27,6 +27,10 @@ defaults write com.apple.dock slow-motion-allowed -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# Don't show open dialog when launching document apps
+# via https://mas.to/@timac@mastodon.social/109851379681544342
+defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
+
 # Disable chime when charging
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
 
