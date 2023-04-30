@@ -133,4 +133,5 @@ brew "graphviz"
 # Not in cask or MAS:
 #  - Hopper Disassembler
 #  - MacSymbolicator
+#  - Smart Scroll
 #  - TinkerTool
