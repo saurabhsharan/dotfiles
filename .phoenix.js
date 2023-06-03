@@ -344,3 +344,50 @@ Key.on("j", ["ctrl", "shift"], () => {
     }
   }
 });
+
+const APPS_TO_IGNORE = [
+  "rcmd",
+  "Bartender 4",
+  "Spotify",
+  "Dash",
+];
+
+// Normal web dev layout
+// Move VSCode to the center 1/3rd of the screen, move Chrome to the right 1/3rd of the screen, and move all other windows to the left 1/3rd of the screen
+Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
+  let screenFrame = Screen.main().flippedVisibleFrame();
+
+  let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+
+  let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
+
+  let vscodeWindows = windows.filter(w => w.app().name() === "Code");
+  let chromeWindows = windows.filter(w => w.app().name() === "Google Chrome");
+  let remainingWindows = windows.filter(w => w.app().name() !== "Code" && w.app().name() !== "Google Chrome");
+
+  vscodeWindows.forEach(w => w.setFrame(middleThirdFrame));
+  chromeWindows.forEach(w => w.setFrame(rightThirdFrame));
+  remainingWindows.forEach(w => w.setFrame(leftThirdFrame));
+});
+
+// Debug web dev layout
+// Move VSCode to the left 1/3rd of the screen, move Chrome Dev Tools to the middle 1/3rd of the screen, move Chrome to the right 1/3rd of the screen (and leave all other app windows untouched)
+Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
+  let screenFrame = Screen.main().flippedVisibleFrame();
+
+  let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+
+  let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
+
+  let vscodeWindows = windows.filter(w => w.app().name() === "Code");
+  let chromeDevToolWindows = windows.filter(w => w.app().name() === "Google Chrome" && w.title().includes("DevTools"));
+  let otherChromeWindows = windows.filter(w => w.app().name() === "Google Chrome" && !w.title().includes("DevTools"));
+
+  vscodeWindows.forEach(w => w.setFrame(leftThirdFrame));
+  chromeDevToolWindows.forEach(w => w.setFrame(middleThirdFrame));
+  otherChromeWindows.forEach(w => w.setFrame(rightThirdFrame));
+});
