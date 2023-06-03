@@ -89,6 +89,7 @@ cask "zoom"
 tap 'homebrew/cask-fonts'
 cask 'font-fantasque-sans-mono'
 
+brew "age"
 brew "direnv"
 brew "clojure"
 brew "cloudflared"
