@@ -370,6 +370,8 @@ Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
   vscodeWindows.forEach(w => w.setFrame(middleThirdFrame));
   chromeWindows.forEach(w => w.setFrame(rightThirdFrame));
   remainingWindows.forEach(w => w.setFrame(leftThirdFrame));
+
+  vscodeWindows[0].focus();
 });
 
 // Debug web dev layout
@@ -390,4 +392,25 @@ Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
   vscodeWindows.forEach(w => w.setFrame(leftThirdFrame));
   chromeDevToolWindows.forEach(w => w.setFrame(middleThirdFrame));
   otherChromeWindows.forEach(w => w.setFrame(rightThirdFrame));
+
+  vscodeWindows[0].focus();
+});
+
+// Expanded web dev layout
+// Move VSCode to left 2/3rd of the screen, and move every other window to the right 1/3rd of the screen
+Key.on("c", ["ctrl", "option", "shift", "cmd"], () => {
+  let screenFrame = Screen.main().flippedVisibleFrame();
+
+  let leftTwoThirdsFrame = { x: screenFrame.x, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
+  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+
+  let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
+
+  let vscodeWindows = windows.filter(w => w.app().name() === "Code");
+  let remainingWindows = windows.filter(w => w.app().name() !== "Code");
+
+  vscodeWindows.forEach(w => w.setFrame(leftTwoThirdsFrame));
+  remainingWindows.forEach(w => w.setFrame(rightThirdFrame));
+
+  vscodeWindows[0].focus();
 });
