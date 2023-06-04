@@ -413,4 +413,8 @@ Key.on("c", ["ctrl", "option", "shift", "cmd"], () => {
   remainingWindows.forEach(w => w.setFrame(rightThirdFrame));
 
   vscodeWindows[0].focus();
+
+  // Raise the browser Chrome window above the DevTools window
+  let chromeBrowserWindows = Space.active().windows().filter(w => w.app().name() === "Google Chrome" && !w.title().includes("DevTools"));
+  chromeBrowserWindows.forEach(w => w.raise());
 });
