@@ -14,6 +14,18 @@ function isOverlap(window1, window2) {
   );
 }
 
+function computeDisplayFrames() {
+  let screenFrame = Screen.main().flippedVisibleFrame();
+
+  let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  let leftTwoThirdsFrame = { x: screenFrame.x, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
+  let rightTwoThirdsFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
+
+  return { leftThirdFrame, middleThirdFrame, rightThirdFrame, leftTwoThirdsFrame, rightTwoThirdsFrame };
+}
+
 // Finds three windows that are tiled side-by-side
 function findThreeTiledWindows() {
   let currentWindow = Window.focused();
@@ -357,9 +369,7 @@ const APPS_TO_IGNORE = [
 Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
   let screenFrame = Screen.main().flippedVisibleFrame();
 
-  let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
-  let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
-  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  const { leftThirdFrame, middleThirdFrame, rightThirdFrame } = computeDisplayFrames();
 
   let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
 
@@ -371,7 +381,17 @@ Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
   chromeWindows.forEach(w => w.setFrame(rightThirdFrame));
   remainingWindows.forEach(w => w.setFrame(leftThirdFrame));
 
-  vscodeWindows[0].focus();
+  let figmaWindows = windows.filter(w => w.app().name() === "Figma");
+
+  // Quickly focus Figma to bring it to the front
+  // Note that .raise() won't work here since that only makes it the frontmost window in the app, not the frontmost window on the screen
+  if (figmaWindows.length > 0) {
+    figmaWindows[0].focus();
+  }
+
+  setTimeout(() => {
+    vscodeWindows[0].focus();
+  }, 100);
 });
 
 // Debug web dev layout
@@ -379,9 +399,7 @@ Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
 Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
   let screenFrame = Screen.main().flippedVisibleFrame();
 
-  let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
-  let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
-  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  const { leftThirdFrame, middleThirdFrame, rightThirdFrame } = computeDisplayFrames();
 
   let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
 
@@ -401,8 +419,7 @@ Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
 Key.on("c", ["ctrl", "option", "shift", "cmd"], () => {
   let screenFrame = Screen.main().flippedVisibleFrame();
 
-  let leftTwoThirdsFrame = { x: screenFrame.x, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
-  let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
+  const { leftTwoThirdsFrame, rightThirdFrame } = computeDisplayFrames();
 
   let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
 
@@ -417,4 +434,30 @@ Key.on("c", ["ctrl", "option", "shift", "cmd"], () => {
   // Raise the browser Chrome window above the DevTools window
   let chromeBrowserWindows = Space.active().windows().filter(w => w.app().name() === "Google Chrome" && !w.title().includes("DevTools"));
   chromeBrowserWindows.forEach(w => w.raise());
+});
+
+// Expanded web dev layout alt
+// Move VSCode to right 2/3rd of the screen, and move every other window to left 1/3rd of the screen
+Key.on("d", ["ctrl", "option", "shift", "cmd"], () => {
+  let screenFrame = Screen.main().flippedVisibleFrame();
+
+  const { leftThirdFrame, rightTwoThirdsFrame } = computeDisplayFrames();
+
+  let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
+
+  let vscodeWindows = windows.filter(w => w.app().name() === "Code");
+  let remainingWindows = windows.filter(w => w.app().name() !== "Code");
+
+  remainingWindows.forEach(w => w.setFrame(leftThirdFrame));
+  vscodeWindows.forEach(w => w.setFrame(rightTwoThirdsFrame));
+
+  // Quickly focus Figma to bring it to the front
+  // Note that .raise() won't work here since that only makes it the frontmost window in the app, not the frontmost window on the screen
+  if (figmaWindows.length > 0) {
+    figmaWindows[0].focus();
+  }
+
+  setTimeout(() => {
+    vscodeWindows[0].focus();
+  }, 100);
 });
