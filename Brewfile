@@ -10,6 +10,7 @@ mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
 mas "Base - SQLite Editor", id: 402383384
+mas "BBEdit", id: 404009241
 mas "Charmstone", id: 1563735522
 mas "DevCleaner for Xcode", id: 1388020431
 mas "Icon Set Creator", id: 939343785
@@ -43,6 +44,7 @@ cask "firefox"
 cask "fork"
 cask "github"
 cask "google-chrome"
+cask "hazel"
 cask "iina"
 cask "imageoptim"
 cask "insomnia"
@@ -53,7 +55,7 @@ cask "keyboardcleantool"
 cask "latest"
 cask "launchcontrol"
 cask "mactracker"
-cask "macvim"
+# cask "macvim"
 cask "maestral"
 # cask "marta"
 cask "meetingbar"
@@ -66,9 +68,14 @@ cask "moom"
 cask "netnewswire"
 cask "notion"
 cask "omnidisksweeper"
+cask "orion"
 cask "pdf-squeezer"
+cask "phoenix"
 cask "plug"
+cask "quitter"
 cask "responsively"
+cask "roam-research"
+cask "rocket-typist"
 cask "selfcontrol"
 cask "sf-symbols"
 cask "slack"
@@ -78,9 +85,11 @@ cask "stats"
 cask "syntax-highlight"
 cask "table-tool"
 cask "textmate"
+cask "tg-pro"
 cask "tripmode"
 cask "saulpw/vd/visidata"
 cask "visual-studio-code"
+cask "vitals"
 cask "whichspace"
 cask "wordservice"
 cask "xcodes"
@@ -132,7 +141,10 @@ brew "graphviz"
 
 
 # Not in cask or MAS:
+#  - Homerow
 #  - Hopper Disassembler
+#  - Keyboard Scroller
 #  - MacSymbolicator
+#  - rcmd
 #  - Smart Scroll
 #  - TinkerTool
