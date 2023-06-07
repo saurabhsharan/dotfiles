@@ -57,6 +57,29 @@ defaults write com.apple.CrashReporter UseUNC 1
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -float 0.0
 defaults write com.apple.dt.Xcode XcodeCloudUpsellPromptEnabled -bool false
 
+# Install app-specific keyboard shortcuts
+# https://apple.stackexchange.com/questions/398561/how-to-set-system-keyboard-shortcuts-via-command-line
+# Note that the -array-add command is not idempotent, and there's no built-in defaults -array-remove, so if this runs multiple times may have to do some manual cleanup by clearing the custommenu.apps array and re-adding everything from scratch
+# NetNewsWire.app: Edit > Copy Article URL is Shift+Cmd+C
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.ranchero.NetNewsWire-Evergreen"
+defaults write com.ranchero.NetNewsWire-Evergreen NSUserKeyEquivalents -dict-add "Copy Article URL" -string "@\$C"
+
+# Messages.app: Conversation > Delete Conversation is Opt+Cmd+9
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.apple.MobileSMS"
+defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Delete Conversation..." -string "@~9"
+
+# Prime Video.app: View > Stay on top is Ctrl+Cmd+T
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.amazon.aiv.AIVApp"
+defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Stay on top" -string "@^t"
+
+# IINA.app: Playback > Jump to Beginning is Shift+Cmd+J
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.colliderli.iina"
+defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Jump to Beginning" -string "@\$j"
+
+# BBEdit: Window > Notes is Opt+1
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.barebones.bbedit"
+defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Notes" -string "~1"
+
 # Restart processes
 killall Dock
 killall Finder
