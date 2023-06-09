@@ -362,6 +362,7 @@ const APPS_TO_IGNORE = [
   "Bartender 4",
   "Spotify",
   "Dash",
+  "Prime Video",
 ];
 
 // Normal web dev layout
