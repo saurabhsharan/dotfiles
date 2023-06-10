@@ -79,6 +79,7 @@ defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Jump to Begin
 # BBEdit: Window > Notes is Opt+1
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.barebones.bbedit"
 defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Notes" -string "~1"
+defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
 
 # Restart processes
 killall Dock
