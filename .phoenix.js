@@ -357,6 +357,54 @@ Key.on("j", ["ctrl", "shift"], () => {
   }
 });
 
+// Move focus to left-most window in tile (if windows are tiled)
+Key.on("1", ["ctrl", "cmd"], () => {
+  let tiledWindows = getTiledWindowsConfig();
+
+  if (tiledWindows.type === "none") {
+    return;
+  }
+
+  if (tiledWindows.type === "three-tile") {
+    tiledWindows.windows[0].focus();
+  }
+  if (tiledWindows.type === "two-tile") {
+    tiledWindows.windows[0].focus();
+  }
+});
+
+// Move focus to middle window in tile (if windows are tiled) (or right window if there are only two windows)
+Key.on("2", ["ctrl", "cmd"], () => {
+  let tiledWindows = getTiledWindowsConfig();
+
+  if (tiledWindows.type === "none") {
+    return;
+  }
+
+  if (tiledWindows.type === "three-tile") {
+    tiledWindows.windows[1].focus();
+  }
+  if (tiledWindows.type === "two-tile") {
+    tiledWindows.windows[1].focus();
+  }
+});
+
+// Move focus to right-most window in tile (if windows are tiled)
+Key.on("3", ["ctrl", "cmd"], () => {
+  let tiledWindows = getTiledWindowsConfig();
+
+  if (tiledWindows.type === "none") {
+    return;
+  }
+
+  if (tiledWindows.type === "three-tile") {
+    tiledWindows.windows[2].focus();
+  }
+  if (tiledWindows.type === "two-tile") {
+    tiledWindows.windows[1].focus();
+  }
+});
+
 const APPS_TO_IGNORE = [
   "rcmd",
   "Bartender 4",
@@ -451,6 +499,8 @@ Key.on("d", ["ctrl", "option", "shift", "cmd"], () => {
 
   remainingWindows.forEach(w => w.setFrame(leftThirdFrame));
   vscodeWindows.forEach(w => w.setFrame(rightTwoThirdsFrame));
+
+  let figmaWindows = windows.filter(w => w.app().name() === "Figma");
 
   // Quickly focus Figma to bring it to the front
   // Note that .raise() won't work here since that only makes it the frontmost window in the app, not the frontmost window on the screen
