@@ -1,243 +1,229 @@
 {
-  "title": "VSCode Fn keys",
-  "rules": [
-    {
-      "description": "VS Code Function keys work as Fn keys",
-      "manipulators": [
-        {
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f1",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f1"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f2"
-          },
-          "to": [
-            {
-              "key_code": "f2"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f3"
-          },
-          "to": [
-            {
-              "key_code": "f3"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f4"
-          },
-          "to": [
-            {
-              "key_code": "f4"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f5"
-          },
-          "to": [
-            {
-              "key_code": "f5"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f6"
-          },
-          "to": [
-            {
-              "key_code": "f6"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f7"
-          },
-          "to": [
-            {
-              "key_code": "f7"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f8"
-          },
-          "to": [
-            {
-              "key_code": "f8"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f9"
-          },
-          "to": [
-            {
-              "key_code": "f9"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f10"
-          },
-          "to": [
-            {
-              "key_code": "f10"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "file_paths": [
-                "Visual Studio Code\\.app"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f11"
-          },
-          "to": [
-            {
-              "key_code": "f11"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {
-            "key_code": "f12"
-          },
-          "to": [
-            {
-              "key_code": "f12"
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    }
-  ]
+	"title": "VSCode Fn keys",
+	"rules": [
+		{
+			"description": "VS Code Function keys work as Fn keys",
+			"manipulators": [
+				{
+					"conditions": [
+						{
+							"bundle_identifiers": [
+								"^com\\.microsoft\\.VSCode$"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f1",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "f1"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f2"
+					},
+					"to": [
+						{
+							"key_code": "f2"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f4"
+					},
+					"to": [
+						{
+							"key_code": "f4"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f5"
+					},
+					"to": [
+						{
+							"key_code": "f5"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f6"
+					},
+					"to": [
+						{
+							"key_code": "f6"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f7"
+					},
+					"to": [
+						{
+							"key_code": "f7"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f8"
+					},
+					"to": [
+						{
+							"key_code": "f8"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f9"
+					},
+					"to": [
+						{
+							"key_code": "f9"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f10"
+					},
+					"to": [
+						{
+							"key_code": "f10"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"file_paths": [
+								"Visual Studio Code\\.app"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f11"
+					},
+					"to": [
+						{
+							"key_code": "f11"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"bundle_identifiers": [
+								"^com\\.microsoft\\.VSCode$"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f12",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "f12"
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
+	]
 }

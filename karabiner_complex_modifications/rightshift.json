@@ -2,7 +2,7 @@
   "title": "Double tap shift keys",
   "rules": [
     {
-      "description": "Right shift x2 for Moom window mode",
+      "description": "Right shift x2 for Superkey search",
       "manipulators": [
         {
           "type": "basic",
@@ -16,11 +16,10 @@
           },
           "to": [
             {
-              "key_code": "m",
+              "key_code": "spacebar",
               "modifiers": [
                 "left_command",
-                "left_option",
-                "left_shift"
+                "left_option"
               ]
             }
           ],
