@@ -1,0 +1,13 @@
+# ~/.config/starship.toml
+
+[directory]
+truncate_to_repo = false
+
+[nodejs]
+symbol = '🤖'
+
+[git_status]
+disabled = true
+
+[package]
+disabled = true
