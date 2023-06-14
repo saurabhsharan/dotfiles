@@ -17,13 +17,16 @@ function isOverlap(window1, window2) {
 function computeDisplayFrames() {
   let screenFrame = Screen.main().flippedVisibleFrame();
 
+  let leftHalfFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 2, height:  screenFrame.height };
+  let rightHalfFrame = { x: screenFrame.x + screenFrame.width / 2, y: screenFrame.y, width: screenFrame.width / 2, height:  screenFrame.height };
+
   let leftThirdFrame = { x: screenFrame.x, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
   let middleThirdFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
   let rightThirdFrame = { x: screenFrame.x + 2 * screenFrame.width / 3, y: screenFrame.y, width: screenFrame.width / 3, height:  screenFrame.height };
   let leftTwoThirdsFrame = { x: screenFrame.x, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
   let rightTwoThirdsFrame = { x: screenFrame.x + screenFrame.width / 3, y: screenFrame.y, width: 2 * screenFrame.width / 3, height:  screenFrame.height };
 
-  return { leftThirdFrame, middleThirdFrame, rightThirdFrame, leftTwoThirdsFrame, rightTwoThirdsFrame };
+  return { leftHalfFrame, rightHalfFrame, leftThirdFrame, middleThirdFrame, rightThirdFrame, leftTwoThirdsFrame, rightTwoThirdsFrame };
 }
 
 // Finds three windows that are tiled side-by-side
@@ -206,11 +209,6 @@ function retileTwoWindows(direction) {
   }
 
   console.log(`took ${Date.now() - start} ms to find windows`);
-  console.log(
-    `found windows ${window1.app().name()} (${window1.title()}) and  ${window2
-      .app()
-      .name()} (${window2.title()})`
-  );
 
   let leftWindow = null;
   let rightWindow = null;
@@ -225,14 +223,24 @@ function retileTwoWindows(direction) {
     leftWindow = window2;
     rightWindow = window1;
   }
+  console.log(
+    `found windows ${leftWindow.app().name()} (${leftWindow.title()}) [left] and  ${rightWindow
+      .app()
+      .name()} (${rightWindow.title()} [right])`
+  );
 
   let leftFrame = leftWindow.frame();
   let rightFrame = rightWindow.frame();
+
+  console.log(`current frames are ${JSON.stringify([leftFrame, rightFrame])}`);
 
   leftFrame.width -= INCREMENT_WIDTH * direction;
   rightFrame.width += INCREMENT_WIDTH * direction;
   rightFrame.x -= INCREMENT_WIDTH * direction;
 
+  console.log(`new frames are ${JSON.stringify([leftFrame, rightFrame])}`);
+
+  // TODO: seems like if you try to change both the width and the x of Orion.app window at the same time, it will keep the the same x position (but correctly change the width) - best workaround is likely to always tile Orion.app windows to the left since we only need to adjust one frame property of the left window
   start = Date.now();
   leftWindow.setFrame(leftFrame);
   rightWindow.setFrame(rightFrame);
@@ -444,7 +452,7 @@ Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
 });
 
 // Debug web dev layout
-// Move VSCode to the left 1/3rd of the screen, move Chrome Dev Tools to the middle 1/3rd of the screen, move Chrome to the right 1/3rd of the screen (and leave all other app windows untouched)
+// Move VSCode and iTerm to the left 1/3rd of the screen, move Chrome Dev Tools to the middle 1/3rd of the screen, move Chrome to the right 1/3rd of the screen (and leave all other app windows untouched)
 Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
   let screenFrame = Screen.main().flippedVisibleFrame();
 
@@ -454,9 +462,11 @@ Key.on("b", ["ctrl", "option", "shift", "cmd"], () => {
 
   let vscodeWindows = windows.filter(w => w.app().name() === "Code");
   let chromeDevToolWindows = windows.filter(w => w.app().name() === "Google Chrome" && w.title().includes("DevTools"));
+  let itermWindows = windows.filter(w => w.app().name() === "iTerm2");
   let otherChromeWindows = windows.filter(w => w.app().name() === "Google Chrome" && !w.title().includes("DevTools"));
 
   vscodeWindows.forEach(w => w.setFrame(leftThirdFrame));
+  itermWindows.forEach(w => w.setFrame(leftThirdFrame));
   chromeDevToolWindows.forEach(w => w.setFrame(middleThirdFrame));
   otherChromeWindows.forEach(w => w.setFrame(rightThirdFrame));
 
@@ -511,4 +521,30 @@ Key.on("d", ["ctrl", "option", "shift", "cmd"], () => {
   setTimeout(() => {
     vscodeWindows[0].focus();
   }, 100);
+});
+
+// Tile the two most recent windows
+// Special cases/notes:
+//  - Will always tile Orion.app on the left (see TODO above for context)
+Key.on(",", ["option", "shift"], () => {
+  const { leftHalfFrame, rightHalfFrame } = computeDisplayFrames();
+
+  let windows = Window.recent();
+
+  if (windows.length < 2) {
+    return;
+  }
+
+  let leftWindow = windows[0];
+  let rightWindow = windows[1];
+
+  // swap leftWindow and rightWindow if rightWindow is Orion.app
+  if (rightWindow.app().name() === "Orion") {
+    [leftWindow, rightWindow] = [rightWindow, leftWindow];
+  }
+
+  leftWindow.setFrame(leftHalfFrame);
+  rightWindow.setFrame(rightHalfFrame);
+
+  leftWindow.focus();
 });
