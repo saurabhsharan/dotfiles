@@ -291,8 +291,7 @@ Key.on("l", ["ctrl", "shift"], () => {
   console.log(`took ${Date.now() - start} ms to retile`);
 });
 
-// When windows are tiled (either two-way or three-way), Ctrl+Shift+K will move window focus to the spatially east window.
-Key.on("k", ["ctrl", "shift"], () => {
+function moveFocusToRightWindowTile() {
   let currentWindow = Window.focused();
   let tiledWindows = getTiledWindowsConfig();
   // console.log(`tiled windows config: ${JSON.stringify(tiledWindows)}`);
@@ -326,6 +325,15 @@ Key.on("k", ["ctrl", "shift"], () => {
       leftWindow.focus();
     }
   }
+}
+
+// When windows are tiled (either two-way or three-way), Ctrl+Shift+K will move window focus to the spatially east window.
+Key.on("k", ["ctrl", "shift"], () => {
+  moveFocusToRightWindowTile();
+});
+
+Key.on("m", ["ctrl"], () => {
+  moveFocusToRightWindowTile();
 });
 
 // When windows are tiled (either two-way or three-way), Ctrl+Shift+J will move window focus to the spatially west window.
@@ -523,10 +531,7 @@ Key.on("d", ["ctrl", "option", "shift", "cmd"], () => {
   }, 100);
 });
 
-// Tile the two most recent windows
-// Special cases/notes:
-//  - Will always tile Orion.app on the left (see TODO above for context)
-Key.on(",", ["option", "shift"], () => {
+function tileTwoMostRecentWindows() {
   const { leftHalfFrame, rightHalfFrame } = computeDisplayFrames();
 
   let windows = Window.recent();
@@ -538,13 +543,27 @@ Key.on(",", ["option", "shift"], () => {
   let leftWindow = windows[0];
   let rightWindow = windows[1];
 
-  // swap leftWindow and rightWindow if rightWindow is Orion.app
+  // Try to put Roam Research.app on the right
+  if (leftWindow.app().name() === "Roam Research") {
+    [leftWindow, rightWindow] = [rightWindow, leftWindow];
+  }
+
+  // Make sure Orion.app is always on the left
   if (rightWindow.app().name() === "Orion") {
     [leftWindow, rightWindow] = [rightWindow, leftWindow];
   }
 
   leftWindow.setFrame(leftHalfFrame);
   rightWindow.setFrame(rightHalfFrame);
+}
 
-  leftWindow.focus();
+// Tile the two most recent windows
+// Special cases/notes:
+//  - Will always tile Orion.app on the left (see TODO above for context)
+Key.on(",", ["option", "shift"], () => {
+  tileTwoMostRecentWindows();
+});
+
+Key.on("0", ["ctrl"], () => {
+  tileTwoMostRecentWindows();
 });
