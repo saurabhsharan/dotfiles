@@ -2,6 +2,10 @@
 
 const INCREMENT_WIDTH = 200;
 
+// Since Window.recent() can sometimes take ~500ms to return, maintain a cache of windows in recent order
+// TODO: ideally would have one recent window cache per space
+var RECENT_WINDOW_CACHE = null;
+
 function isOverlap(window1, window2) {
   let f1 = window1.frame();
   let f2 = window2.frame();
@@ -30,9 +34,9 @@ function computeDisplayFrames() {
 }
 
 // Finds three windows that are tiled side-by-side
-function findThreeTiledWindows() {
+function findThreeTiledWindows(recentWindows) {
   let currentWindow = Window.focused();
-  let windows = Window.recent();
+  let windows = recentWindows;
 
   let screenFrame = Space.active().screens()[0].visibleFrame();
 
@@ -87,9 +91,6 @@ function findThreeTiledWindows() {
         }
       }
 
-      // console.log(`the three window titles are: ${JSON.stringify([firstWindow.title(), secondWindow.title(), thirdWindow.title()])}`);
-      // console.log(`the three window frames are: ${JSON.stringify([firstWindow.frame(), secondWindow.frame(), thirdWindow.frame()])}`);
-
       let firstWindowSize =
         firstWindow.frame().width * firstWindow.frame().height;
       let secondWindowSize =
@@ -113,20 +114,15 @@ function findThreeTiledWindows() {
         );
         return result;
       }
-
-      // if (firstWindow.frame().x + firstWindow.frame().width === secondWindow.frame().x &&
-      //     secondWindow.frame().x + secondWindow.frame().width === thirdWindow.frame().x) {
-      //   return [firstWindow, secondWindow, thirdWindow];
-      // }
     }
   }
 
   return null;
 }
 
-function findTwoTiledWindows() {
+function findTwoTiledWindows(recentWindows) {
   let currentWindow = Window.focused();
-  let windows = Window.recent();
+  let windows = recentWindows;
 
   let screenFrame = Space.active().screens()[0].visibleFrame();
 
@@ -164,7 +160,7 @@ function retileTwoWindows(direction) {
   // console.log(`screen frame is ${JSON.stringify(screenFrame)}`);
 
   var start = Date.now();
-  let recentWindows = Window.recent();
+  let recentWindows = RECENT_WINDOW_CACHE ? RECENT_WINDOW_CACHE : Window.recent();
   console.log(`took ${Date.now() - start} ms to call Window.recent()`);
   let windows = recentWindows.filter((wndow) => wndow.isVisible() === true);
 
@@ -248,14 +244,14 @@ function retileTwoWindows(direction) {
 }
 
 // Detects whether the current window config is either two-window tile, three-window tile, or not a tile
-function getTiledWindowsConfig() {
+function getTiledWindowsConfig(recentWindows) {
   // First check for three-window tile, since that config is less likely to occur by accident
-  let threeTiledWindows = findThreeTiledWindows();
+  let threeTiledWindows = findThreeTiledWindows(recentWindows);
   if (threeTiledWindows !== null) {
     return { type: "three-tile", windows: threeTiledWindows };
   }
 
-  let twoTiledWindows = findTwoTiledWindows();
+  let twoTiledWindows = findTwoTiledWindows(recentWindows);
   if (twoTiledWindows !== null) {
     return { type: "two-tile", windows: twoTiledWindows };
   }
@@ -265,37 +261,18 @@ function getTiledWindowsConfig() {
 
 // When two windows are tiled side-by-side, Ctrl-Shift-H will adjust the split to increase the width of the *right* window
 Key.on("h", ["ctrl", "shift"], () => {
-  console.log(`got ctrl-shift-h`);
-  // const allSpaces = Space.all();
-
-  // for (var i = 0; i < allSpaces.length; ++i) {
-  // let space = allSpaces[i];
-  // let spaceWindows = space.windows({});
-
-  // for (const wndow of spaceWindows) {
-  // let app = wndow.app();
-  // console.log(`space ${i} app ${app.name()} window ${wndow.title()}`);
-  // }
-  // }
-
-  var start = Date.now();
   retileTwoWindows(1);
-  console.log(`took ${Date.now() - start} ms to retile`);
 });
 
 // When two windows are tiled side-by-side, Ctrl-Shift-L will adjust the split to increase the width of the *left* window
 Key.on("l", ["ctrl", "shift"], () => {
-  console.log(`got ctrl-shift-l`);
-  var start = Date.now();
   retileTwoWindows(-1);
-  console.log(`took ${Date.now() - start} ms to retile`);
 });
 
 function moveFocusToRightWindowTile() {
   let currentWindow = Window.focused();
-  let tiledWindows = getTiledWindowsConfig();
-  // console.log(`tiled windows config: ${JSON.stringify(tiledWindows)}`);
-  // console.log(`windows: ${JSON.stringify(tiledWindows.windows.map((wndow) => wndow.title()))}`);
+  let recentWindows = RECENT_WINDOW_CACHE ? RECENT_WINDOW_CACHE : Window.recent();
+  let tiledWindows = getTiledWindowsConfig(recentWindows);
 
   if (tiledWindows.type === "none") {
     return;
@@ -339,9 +316,8 @@ Key.on("m", ["ctrl"], () => {
 // When windows are tiled (either two-way or three-way), Ctrl+Shift+J will move window focus to the spatially west window.
 Key.on("j", ["ctrl", "shift"], () => {
   let currentWindow = Window.focused();
-  let tiledWindows = getTiledWindowsConfig();
-  // console.log(`tiled windows config: ${JSON.stringify(tiledWindows)}`);
-  // console.log(`windows: ${JSON.stringify(tiledWindows.windows.map((wndow) => wndow.title()))}`);
+  let recentWindows = Window.recent();
+  let tiledWindows = getTiledWindowsConfig(recentWindows);
 
   if (tiledWindows.type === "none") {
     return;
@@ -375,7 +351,8 @@ Key.on("j", ["ctrl", "shift"], () => {
 
 // Move focus to left-most window in tile (if windows are tiled)
 Key.on("1", ["ctrl", "cmd"], () => {
-  let tiledWindows = getTiledWindowsConfig();
+  let recentWindows = Window.recent();
+  let tiledWindows = getTiledWindowsConfig(recentWindows);
 
   if (tiledWindows.type === "none") {
     return;
@@ -391,7 +368,8 @@ Key.on("1", ["ctrl", "cmd"], () => {
 
 // Move focus to middle window in tile (if windows are tiled) (or right window if there are only two windows)
 Key.on("2", ["ctrl", "cmd"], () => {
-  let tiledWindows = getTiledWindowsConfig();
+  let recentWindows = Window.recent();
+  let tiledWindows = getTiledWindowsConfig(recentWindows);
 
   if (tiledWindows.type === "none") {
     return;
@@ -407,7 +385,8 @@ Key.on("2", ["ctrl", "cmd"], () => {
 
 // Move focus to right-most window in tile (if windows are tiled)
 Key.on("3", ["ctrl", "cmd"], () => {
-  let tiledWindows = getTiledWindowsConfig();
+  let recentWindows = Window.recent();
+  let tiledWindows = getTiledWindowsConfig(recentWindows);
 
   if (tiledWindows.type === "none") {
     return;
@@ -421,6 +400,7 @@ Key.on("3", ["ctrl", "cmd"], () => {
   }
 });
 
+// TODO: Also ignore ScreenFloat.app
 const APPS_TO_IGNORE = [
   "rcmd",
   "Bartender 4",
@@ -432,8 +412,6 @@ const APPS_TO_IGNORE = [
 // Normal web dev layout
 // Move VSCode to the center 1/3rd of the screen, move Chrome to the right 1/3rd of the screen, and move all other windows to the left 1/3rd of the screen
 Key.on("a", ["ctrl", "option", "shift", "cmd"], () => {
-  let screenFrame = Screen.main().flippedVisibleFrame();
-
   const { leftThirdFrame, middleThirdFrame, rightThirdFrame } = computeDisplayFrames();
 
   let windows = Space.active().windows().filter(w => !APPS_TO_IGNORE.includes(w.app().name()));
@@ -566,4 +544,76 @@ Key.on(",", ["option", "shift"], () => {
 
 Key.on("0", ["ctrl"], () => {
   tileTwoMostRecentWindows();
+});
+
+const DEBOUNCE_TIME_MS = 1000;
+
+var invalidateRecentWindowCacheTimeout = null;
+
+function invalidateRecentWindowCacheDebounced() {
+  clearTimeout(invalidateRecentWindowCacheTimeout);
+
+  invalidateRecentWindowCacheTimeout = setTimeout(() => {
+    invalidateRecentWindowCacheTimeout = null;
+
+    let start = new Date().getTime();
+    RECENT_WINDOW_CACHE = Window.recent();
+    let finish = new Date().getTime();
+
+    console.log(`refreshed recent window cache, took ${finish - start}ms`);
+  }, DEBOUNCE_TIME_MS);
+}
+
+Event.on('windowDidOpen', (window) => {
+  if (!window.title()) {
+    return;
+  }
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('windowDidClose', (window) => {
+  if (!window.title()) {
+    return;
+  }
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('windowDidMove', (window) => {
+  if (!window.title()) {
+    return;
+  }
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('windowDidResize', (window) => {
+  if (!window.title()) {
+    return;
+  }
+  invalidateRecentWindowCacheDebounced();
+});
+
+// App events don't change any window positions, but they can change the order of recent windows
+
+Event.on('appDidLaunch', (app) => {
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('appDidTerminate', (app) => {
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('appDidActivate', (app) => {
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('appDidHide', (app) => {
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('appDidShow', (app) => {
+  invalidateRecentWindowCacheDebounced();
+});
+
+Event.on('spaceDidChange', (space) => {
+  invalidateRecentWindowCacheDebounced();
 });
