@@ -81,6 +81,13 @@ defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "c
 defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Notes" -string "~1"
 defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
 
+sleep 2
+
+# Install Rosetta 2
+softwareupdate --install-rosetta --agree-to-license
+
+sleep 2
+
 # Restart processes
 killall Dock
 killall Finder
