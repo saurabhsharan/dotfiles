@@ -37,6 +37,19 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
 # Disable accent key when holding down keys
 sudo defaults write -g ApplePressAndHoldEnabled -bool false
 
+# "Delay until repeat" setting in System Settings > Keyboard
+# 15 (225 ms) is normal minimum configurable via UI
+# via https://gist.github.com/hofmannsven/ff21749b0e6afc50da458bebbd9989c5
+# Also see https://github.com/ZaymonFC/mac-os-key-repeat
+defaults write -g InitialKeyRepeat -int 15
+
+# "Key repeat rate" setting in System Settings > Keyboard
+# Note that this is the interval in between repeats, so the lower this value the faster the repeats will be fired
+# 2 (30 ms) is normal minimum configurable via UI
+# via https://gist.github.com/hofmannsven/ff21749b0e6afc50da458bebbd9989c5
+# Also see https://github.com/ZaymonFC/mac-os-key-repeat
+defaults write -g KeyRepeat -int 2
+
 # Disable Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
