@@ -57,14 +57,26 @@ defaults write com.apple.dock autohide-time-modifier -int 0
 # Hide recent apps from Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Hide all icons on Desktop
+defaults write com.apple.finder CreateDesktop -bool false
+
 # Always show full file extension in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Don't display warning when changing file extension in Finder
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Make crash reports appear as notifications
 defaults write com.apple.CrashReporter UseUNC 1
+
+# Set TextEdit default document format to plain text
+defaults write com.apple.TextEdit RichText -bool false
+
+# Set Activity Monitor update frequency to 2s
+defaults write com.apple.ActivityMonitor UpdatePeriod -int 2
 
 # Xcode defaults configuration
 defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -float 0.0
