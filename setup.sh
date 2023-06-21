@@ -10,6 +10,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # Disable adding period after double space
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+# Disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Enable dragging window from anywhere while holding Ctrl + Cmd
 defaults write -g NSWindowShouldDragOnGesture -bool true
@@ -26,6 +28,12 @@ defaults write com.apple.dock slow-motion-allowed -bool true
 # Always expand open/save dialogs
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Always show scroll bars
+defaults write -g AppleShowScrollBars -string "Always"
+
+# Set sidebar icon size to large
+defaults write -g NSTableViewDefaultSizeMode -int 3
 
 # Don't show open dialog when launching document apps
 # via https://mas.to/@timac@mastodon.social/109851379681544342
@@ -69,8 +77,27 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Don't display warning when changing file extension in Finder
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Set default location of new Finder windows to ~/Downloads
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads"
+
 # Make crash reports appear as notifications
 defaults write com.apple.CrashReporter UseUNC 1
+
+# Show full URL in Safari address bar
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Set Safari home page to about:blank
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# Only enable AutoFill for address book (for icloud hide my email integration) and credit card (for apple card integration)
+defaults write com.apple.Safari AutoFillFromAddressBook -bool true
+defaults write com.apple.Safari AutoFillCreditCardData -bool true
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
+
+# Enable Develop menu in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
 # Set TextEdit default document format to plain text
 defaults write com.apple.TextEdit RichText -bool false
