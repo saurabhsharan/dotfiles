@@ -29,6 +29,9 @@ defaults write com.apple.dock slow-motion-allowed -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# Disable "Natural scrolling"
+defaults write -g com.apple.swipescrolldirection -bool false
+
 # Always show scroll bars
 defaults write -g AppleShowScrollBars -string "Always"
 
@@ -58,6 +61,8 @@ defaults write -g InitialKeyRepeat -int 15
 # Also see https://github.com/ZaymonFC/mac-os-key-repeat
 defaults write -g KeyRepeat -int 2
 
+# Enable Dock autohide
+defaults write com.apple.dock autohide -bool true
 # Disable Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0
@@ -85,7 +90,8 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Down
 defaults write com.apple.CrashReporter UseUNC 1
 
 # Show full URL in Safari address bar
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+# Update (6/25/23): doesn't seem to work as of Ventura 13.2 + Safari 16.3, can only change this via the Safari Settings window
+# defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
 # Set Safari home page to about:blank
 defaults write com.apple.Safari HomePage -string "about:blank"
@@ -144,3 +150,5 @@ sleep 2
 killall Dock
 killall Finder
 killall PowerChime
+
+# TODO: automate and/or add message about logging out / rebooting
