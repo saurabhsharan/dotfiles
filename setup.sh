@@ -16,6 +16,9 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Enable dragging window from anywhere while holding Ctrl + Cmd
 defaults write -g NSWindowShouldDragOnGesture -bool true
 
+# Expand resize drag area
+defaults write -g AppleEdgeResizeExteriorSize -int 15
+
 # Don't display thumbnail after taking a screenshot
 defaults write com.apple.screencapture show-thumbnail -bool false
 
