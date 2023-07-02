@@ -17,6 +17,7 @@ mas "Icon Set Creator", id: 939343785
 mas "Keyword Search", id: 1558453954
 mas "Octotree", id: 1457450145 
 mas "Play: Save Videos Watch Later", id: 1596506190
+mas "rcmd • App Switcher", id: 1596283165
 mas "ScreenFloat-Better Screenshots", id: 414528154
 mas "Velja", id: 1607635845
 mas "Vimari", id: 1480933944
@@ -167,7 +168,5 @@ brew "graphviz"
 #  - Hopper Disassembler
 #  - Keyboard Scroller
 #  - MacSymbolicator
-#  - rcmd
-#  - ScreenFloat
 #  - Smart Scroll
 #  - TinkerTool
