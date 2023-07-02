@@ -1,0 +1,4 @@
+github.com##.code-navigation-cursor
+
+||accounts.google.com/gsi/iframe/select$subdocument
+
