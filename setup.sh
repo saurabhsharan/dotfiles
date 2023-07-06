@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Full Disk Access is necessary for writing to com.apple.universalaccess preference domain
+# prompt code via https://stackoverflow.com/a/1885534
+read -p "Make sure that the current terminal app ($TERM_PROGRAM) has full disk access (System Settings > Privacy & Security > Full Disk Access) before continuing. Type y to continue: " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+  exit 1
+fi
+
 # Turn off font smoothing
 # See here for why https://tonsky.me/blog/monitors/
 defaults write-currentHost -g AppleFontSmoothing -int 0
@@ -27,6 +36,11 @@ defaults write com.apple.screencapture type -string jpg
 
 # Re-enable slow animations while holding down Shift
 defaults write com.apple.dock slow-motion-allowed -bool true
+
+# Always show proxy/document icons in window title bars
+defaults write com.apple.universalaccess showWindowTitlebarIcons -bool true
+# Remove rollover delay from title bar icon (even though should always appear from above command)
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
 
 # Always expand open/save dialogs
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
