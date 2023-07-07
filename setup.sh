@@ -9,6 +9,9 @@ then
   exit 1
 fi
 
+# Disable Homebrew analytics
+brew analytics off
+
 # Turn off font smoothing
 # See here for why https://tonsky.me/blog/monitors/
 defaults write-currentHost -g AppleFontSmoothing -int 0
