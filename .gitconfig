@@ -36,3 +36,9 @@
   autoSetupRemote = true
 [core]
   excludesfile = /Users/saurabh/.gitignore
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  light = false
