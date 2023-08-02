@@ -8,6 +8,8 @@ set mouse=a " allow mouse reporting
 set smartindent " adjust indentation based on file syntax
 set autoindent " apply indentation of current line to next line (when pressing Enter or o)
 
+set backspace=indent,eol,start " fixes some issue with delete key not working in iTerm, via https://apple.stackexchange.com/a/174351
+
 set showmatch " flashes matching paren when one is typed
 
 " hybrid line numbers shows relative line numbers for all lines except the current line
