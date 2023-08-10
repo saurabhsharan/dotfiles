@@ -33,6 +33,9 @@ filetype indent on
 
 syntax on
 
+" Force .v files to use Verilog syntax highlighting, via https://stackoverflow.com/a/28117335
+au BufRead,BufNewFile *.v set filetype=verilog
+
 set statusline+=%F
 set laststatus=2
 
