@@ -148,11 +148,11 @@ defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Delete Conver
 
 # Prime Video.app: View > Stay on top is Ctrl+Cmd+T
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.amazon.aiv.AIVApp"
-defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Stay on top" -string "@^t"
+defaults write com.amazon.aiv.AIVApp NSUserKeyEquivalents -dict-add "Stay on top" -string "@^t"
 
 # IINA.app: Playback > Jump to Beginning is Shift+Cmd+J
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.colliderli.iina"
-defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Jump to Beginning" -string "@\$j"
+defaults write com.colliderli.iina NSUserKeyEquivalents -dict-add "Jump to Beginning" -string "@\$j"
 
 # iTerm.app: Window > Move Session to Window is Ctrl+Cmd+W
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.googlecode.iterm2"
@@ -160,8 +160,8 @@ defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "Move Sessio
 
 # BBEdit: Window > Notes is Opt+1
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.barebones.bbedit"
-defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Notes" -string "~1"
-defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
+defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Notes" -string "~1"
+defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
 
 sleep 2
 
