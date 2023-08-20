@@ -154,6 +154,10 @@ defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Stay on top" 
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.colliderli.iina"
 defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Jump to Beginning" -string "@\$j"
 
+# iTerm.app: Window > Move Session to Window is Ctrl+Cmd+W
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.googlecode.iterm2"
+defaults write com.googlecode.iterm2 NSUserKeyEquivalents -dict-add "Move Session to Window" -string "@^w"
+
 # BBEdit: Window > Notes is Opt+1
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.barebones.bbedit"
 defaults write com.apple.MobileSMS NSUserKeyEquivalents -dict-add "Notes" -string "~1"
