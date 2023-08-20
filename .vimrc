@@ -61,6 +61,20 @@ set foldlevelstart=99 " start file with all folds open
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+" Update iTerm window title with current buffer filename via https://gist.github.com/bignimbus/1da46a18416da4119778
+function! SetTerminalTitle()
+    let titleString = expand('%:t')
+    if len(titleString) > 0
+        let &titlestring = expand('%:t')
+        " this is the format iTerm2 expects when setting the window title
+        let args = "\033];".&titlestring."\007"
+        let cmd = 'silent !echo -e "'.args.'"'
+        execute cmd
+        redraw!
+    endif
+endfunction
+autocmd BufEnter * call SetTerminalTitle()
+
 :command WQ wq
 :command Wq wq
 command W w
