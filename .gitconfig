@@ -24,10 +24,11 @@
   ls = log --oneline
   # recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
 [format]
-  pretty = oneline
+  # format string via https://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date#comment11498716_1441062
+  pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [log]
+  date = short
   decorate = short
-  pretty = oneline
 [diff]
   noprefix = true
 [pull]
