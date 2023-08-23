@@ -138,6 +138,12 @@ defaults write com.apple.dt.Xcode XcodeCloudUpsellPromptEnabled -bool false
 # Install app-specific keyboard shortcuts
 # https://apple.stackexchange.com/questions/398561/how-to-set-system-keyboard-shortcuts-via-command-line
 # Note that the -array-add command is not idempotent, and there's no built-in defaults -array-remove, so if this runs multiple times may have to do some manual cleanup by clearing the custommenu.apps array and re-adding everything from scratch
+
+# Orion.app: Window > Move Tab > New Window is Opt+Shift+Cmd+M
+# N.B. the full menu path is needed since just "New Window" conflicts with File > New Window
+# For some reason though using full menu paths only works when adding to the "All Applications" app shortcuts, not to Orion
+defaults write -g NSUserKeyEquivalents -dict-add "Window->Move Tab->New Window" "@~\$m"
+
 # NetNewsWire.app: Edit > Copy Article URL is Shift+Cmd+C
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.ranchero.NetNewsWire-Evergreen"
 defaults write com.ranchero.NetNewsWire-Evergreen NSUserKeyEquivalents -dict-add "Copy Article URL" -string "@\$C"
