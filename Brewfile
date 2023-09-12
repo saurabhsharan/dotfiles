@@ -143,7 +143,8 @@ brew "the_silver_searcher"
 brew "tldr"
 brew "vim"
 brew "wget"
-brew "youtube-dl"
+# brew "youtube-dl"
+brew "yt-dlp"
 # Seems better to use rustup
 # brew "rust"
 
