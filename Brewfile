@@ -11,6 +11,7 @@ mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
 mas "Base - SQLite Editor", id: 402383384
 mas "BBEdit", id: 404009241
+mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Charmstone", id: 1563735522
 mas "Dropover", id: 1355679052
 mas "DevCleaner for Xcode", id: 1388020431
