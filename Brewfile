@@ -6,6 +6,7 @@ cask_args appdir: "/Applications"
 
 brew "mas"
 
+mas "Amazon Prime Video", id: 545519333
 mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
 mas "Battery Monitor: Health, Info", id: 836505650
@@ -121,6 +122,7 @@ tap 'homebrew/cask-fonts'
 cask 'font-fantasque-sans-mono'
 
 brew "age"
+brew "asroute"
 brew "clojure"
 brew "cloudflared"
 brew "cmake"
@@ -139,6 +141,8 @@ brew "gping"
 brew "jq"
 brew "leiningen"
 brew "llm"
+brew "mkcert"
+brew "netlify-cli"
 brew "node"
 brew "openjdk"
 brew "pdfgrep"
