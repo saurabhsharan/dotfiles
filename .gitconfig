@@ -45,3 +45,5 @@
 [delta]
   navigate = true
   light = false
+[gpg]
+  format = ssh
