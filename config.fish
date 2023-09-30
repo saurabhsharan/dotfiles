@@ -6,9 +6,17 @@ function cdf
   cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
 end
 
+# `f` will open current directory in new Finder window
+alias f='open -a Finder .'
+
 alias g="git"
 alias gs="git status -sb"
 alias gcd="git clone --depth 1"
+alias gpu="git push"
+alias gd="git diff"
+alias gfa="git fetch --all"
+alias gcd="git clone --depth 1"
+alias gpf="git pull --ff-only"
 alias git-my-branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | grep -i saurabh"
 
 alias ls-dir="ls -d */"
