@@ -6,6 +6,7 @@ cask_args appdir: "/Applications"
 
 brew "mas"
 
+mas "1Blocker - Ad Blocker", id: 1365531024
 mas "Amazon Prime Video", id: 545519333
 mas "Amphetamine", id: 937984704
 mas "Apple Developer", id: 640199958
