@@ -123,6 +123,7 @@ cask "zoom"
 
 tap 'homebrew/cask-fonts'
 cask 'font-fantasque-sans-mono'
+cask 'font-source-code-pro'
 
 brew "age"
 brew "asroute"

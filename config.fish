@@ -1,3 +1,9 @@
+# Use Homebrew
+eval (env SHELL=fish /opt/homebrew/bin/brew shellenv)
+
+# Use Starship
+starship init fish | source
+
 # prevent __pycache__ files https://www.scivision.dev/python-pycache-eliminate
 set -gx PYTHONDONTWRITEBYTECODE 1
 

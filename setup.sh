@@ -169,6 +169,11 @@ defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "c
 defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Notes" -string "~1"
 defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
 
+# iTerm2 defaults
+defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
+
+# Manually download iTerm2 theme: https://github.com/fcaldera/github-primer-iterm2
+
 sleep 2
 
 # Install Rosetta 2
