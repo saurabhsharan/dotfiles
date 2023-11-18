@@ -122,7 +122,15 @@ cask "xcodes"
 cask "zoom"
 
 tap 'homebrew/cask-fonts'
+cask 'font-barlow'
 cask 'font-fantasque-sans-mono'
+cask 'font-ibm-plex-mono'
+cask 'font-ibm-plex-sans'
+cask 'font-ibm-plex-serif'
+cask 'font-inter'
+cask 'font-jetbrains-mono'
+cask 'font-nunito-sans'
+cask 'font-poppins'
 cask 'font-source-code-pro'
 
 brew "age"
