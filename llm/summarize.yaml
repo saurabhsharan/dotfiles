@@ -1,0 +1,3 @@
+model: gpt-3.5-turbo-16k
+system: Summarize this in as much detail as possible, formatting the output as an
+    outline in bullet points
