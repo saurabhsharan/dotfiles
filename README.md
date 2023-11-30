@@ -13,3 +13,4 @@
 | starship.toml | config for [starship shell prompt](https://starship.rs) | `~/.config/starship.toml` | |
 | ublock-filters.txt | blocklist for [ublock origin](https://ublockorigin.com/) | N/A | Copy manually into extension preferences |
 | login.sh | script that runs on system startup/login | N/A | Add as login item in System Settings > General > Login Items |
+| paste.py | clipboard filter before pasting | N/A | Configure as keyboard maestro macro |
