@@ -81,6 +81,9 @@ defaults write -g InitialKeyRepeat -int 15
 # Also see https://github.com/ZaymonFC/mac-os-key-repeat
 defaults write -g KeyRepeat -int 2
 
+# Don't automatically rearrange Spaces
+defaults write com.apple.dock mru-spaces -bool false
+
 # Enable Dock autohide
 defaults write com.apple.dock autohide -bool true
 # Disable Dock delay
