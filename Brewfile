@@ -160,10 +160,12 @@ brew "netlify-cli"
 brew "node"
 brew "openjdk"
 brew "pdfgrep"
+brew "prettier"
 brew "protobuf"
 brew "ripgrep-all"
 brew "rsync"
 brew "scc"
+brew "shellcheck"
 brew "smartmontools"
 brew "starship"
 brew "the_silver_searcher"
@@ -174,6 +176,9 @@ brew "wget"
 brew "yt-dlp"
 # Seems better to use rustup
 # brew "rust"
+
+tap "oven-sh/bun"
+brew "bun"
 
 # chip design packages
 brew "gtkwave"
