@@ -12,6 +12,11 @@ function cdf
   cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
 end
 
+# via https://mastodon.online/@nikitonsky/111421674555445464
+function ckdir
+  mkdir -p $argv[1] && cd $argv[1]
+end
+
 # `f` will open current directory in new Finder window
 alias f='open -a Finder .'
 
