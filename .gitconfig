@@ -33,6 +33,8 @@
   decorate = short
 [diff]
   noprefix = true
+[merge]
+  conflictStyle = diff3
 [pull]
   ff = only
 [push]
