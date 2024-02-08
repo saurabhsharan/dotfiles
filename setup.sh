@@ -16,6 +16,9 @@ brew analytics off
 # See here for why https://tonsky.me/blog/monitors/
 defaults write-currentHost -g AppleFontSmoothing -int 0
 
+# Increase mouse speed
+defaults write -g com.apple.mouse.scaling -float 7.960733
+
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Disable auto-capitalization
