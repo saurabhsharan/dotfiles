@@ -26,11 +26,12 @@
   # via https://www.karl.berlin/git-default-branch.html
   default-branch = "!git symbolic-ref refs/remotes/origin/HEAD --short | sed 's|origin/||'"
 [format]
-  # format string via https://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date#comment11498716_1441062
-  pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
+  pretty = %C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)
 [log]
-  date = short
+  date = relative
   decorate = short
+  graph = true
+  abbrevCommit = true
 [diff]
   noprefix = true
 [merge]
