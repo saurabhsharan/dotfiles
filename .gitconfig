@@ -35,7 +35,8 @@
 [diff]
   noprefix = true
 [merge]
-  conflictStyle = diff3
+  # See https://ductile.systems/zdiff3/ for why zdiff3 over diff3
+  conflictStyle = zdiff3
 [pull]
   ff = only
 [push]
@@ -50,3 +51,5 @@
   light = false
 [gpg]
   format = ssh
+[receive]
+  fsckObjects = true
