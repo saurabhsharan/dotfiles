@@ -25,6 +25,7 @@ mas "Octotree", id: 1457450145
 mas "Play: Save Videos Watch Later", id: 1596506190
 mas "rcmd • App Switcher", id: 1596283165
 mas "ScreenFloat-Better Screenshots", id: 414528154
+mas "Silicio Mini Player", id: 933627574
 mas "Velja", id: 1607635845
 mas "Vimari", id: 1480933944
 mas "XCOrganizer", id: 1507556912
