@@ -58,6 +58,9 @@ defaults write -g com.apple.swipescrolldirection -bool false
 # Always show scroll bars
 defaults write -g AppleShowScrollBars -string "Always"
 
+# Jump to spot that's clicked when clicking on scroll bars
+defaults write -g AppleScrollerPagingBehavior -int 1
+
 # Set sidebar icon size to large
 defaults write -g NSTableViewDefaultSizeMode -int 3
 
