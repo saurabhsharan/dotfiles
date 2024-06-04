@@ -178,6 +178,10 @@ defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "c
 defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Notes" -string "~1"
 defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Remove Note" -string "@~9"
 
+# Google Chrome: Tab > Pin Tab is Opt+Cmd+P
+defaults write com.google.Chrome com.apple.custommenu.apps -array-add "com.google.Chrome"
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Pin Tab" -string "~@p"
+
 # iTerm2 defaults
 defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
 
