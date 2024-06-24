@@ -2,3 +2,5 @@ github.com##.code-navigation-cursor
 
 ||accounts.google.com/gsi/iframe/select$subdocument
 
+x.com##[aria-label$="trending now" i]
+x.com##[aria-label$="who to follow" i]
