@@ -32,6 +32,9 @@
   decorate = short
   graph = true
   abbrevCommit = true
+[branch]
+  # Sort output of `git branch` by most recently committed (via https://fosstodon.org/@asb/112659544993354147)
+  sort = -committerdate
 [diff]
   noprefix = true
 [merge]
