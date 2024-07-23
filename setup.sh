@@ -105,6 +105,9 @@ defaults write com.apple.finder CreateDesktop -bool false
 # Always show full file extension in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Use List View as default view in Finder
+defaults write com.apple.finder FXPreferredViewStyle -string Nlsv
+
 # Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
