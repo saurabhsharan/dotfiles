@@ -7,6 +7,11 @@ starship init fish | source
 # prevent __pycache__ files https://www.scivision.dev/python-pycache-eliminate
 set -gx PYTHONDONTWRITEBYTECODE 1
 
+# Force exa to always print output in one line/column (i.e. without a grid)
+# No native env var to disable grid view by default, so as a hack just set the minimum threshold for displaying a grid to some really large number
+# https://the.exa.website/docs/environment-variables
+set -gx EXA_GRID_ROWS 10000000
+
 # `cdf` will change shell's current directory to frontmost Finder window
 function cdf
   cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
