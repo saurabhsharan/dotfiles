@@ -1,0 +1,60 @@
+modmap:
+  - name: Global
+    remap:
+      CapsLock: Ctrl_L
+      KEY_LEFTALT: KEY_LEFTMETA
+      KEY_LEFTMETA: KEY_LEFTALT
+keymap:
+  - name: Arrow keys
+    exact_match: true
+    remap:
+      C-i: up
+      C-j: down
+
+      # Mimic macOS
+      M-left: Ctrl-left
+      M-shift-left: Ctrl-Shift-left
+      M-right: Ctrl-right
+      M-shift-right: Ctrl-Shift-right
+      M-up: Ctrl-Home
+      M-shift-up: Ctrl-Shift-Home
+      M-down: Ctrl-End
+      M-shift-down: Ctrl-Shift-End
+      M-backspace: Ctrl-Backspace
+      Super-left: Home
+      Super-shift-left: Shift-Home
+      Super-right: End
+      Super-shift-right: Shift-End
+  - name: Firefox
+    application:
+      only: firefox
+    remap:
+      SUPER-n: Ctrl-n
+      SUPER-t: Ctrl-t
+      SUPER-w: CTRL-F4 
+      SUPER-1: M-1
+      SUPER-2: M-2
+      SUPER-3: M-3
+      SUPER-4: M-4
+      SUPER-5: M-5
+      SUPER-6: M-6
+      SUPER-7: M-7
+      SUPER-8: M-8
+      SUPER-9: M-9
+      SUPER-0: M-0
+      Alt_R-Shift-RightBrace: Ctrl-Tab
+      Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
+  - name: Chrome
+    application:
+      only: Google-chrome
+    remap:
+      SUPER-t: Ctrl-t
+      SUPER-w: CTRL-F4 
+      Alt_R-Shift-RightBrace: Ctrl-Tab
+      Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
+  - name: Non-web browser
+    application:
+      not: [firefox, Google-chrome]
+    remap:
+      SUPER-q: CTRL-q
+      SUPER-w: CTRL-w
