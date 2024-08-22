@@ -8,9 +8,6 @@ keymap:
   - name: Arrow keys
     exact_match: true
     remap:
-      C-i: up
-      C-j: down
-
       # Mimic macOS
       M-left: Ctrl-left
       M-shift-left: Ctrl-Shift-left
@@ -25,13 +22,25 @@ keymap:
       Super-shift-left: Shift-Home
       Super-right: End
       Super-shift-right: Shift-End
+  - name: All except Nyxt
+    exact_match: true
+    application:
+      not: [nyxt]
+    remap:
+      C-i: up
+      C-j: down
   - name: Firefox
+    exact_match: true
     application:
       only: firefox
     remap:
       SUPER-n: Ctrl-n
       SUPER-t: Ctrl-t
       SUPER-w: CTRL-F4 
+      SUPER-minus: Ctrl-minus
+      SUPER-equal: Ctrl-equal
+      SUPER-leftbrace: Ctrl-leftbrace
+      SUPER-rightbrace: Ctrl-rightbrace
       SUPER-1: M-1
       SUPER-2: M-2
       SUPER-3: M-3
@@ -45,16 +54,38 @@ keymap:
       Alt_R-Shift-RightBrace: Ctrl-Tab
       Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
   - name: Chrome
+    exact_match: true
     application:
       only: Google-chrome
     remap:
       SUPER-t: Ctrl-t
       SUPER-w: CTRL-F4 
+      SUPER-minus: Ctrl-minus
+      SUPER-equal: Ctrl-equal
       Alt_R-Shift-RightBrace: Ctrl-Tab
       Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
-  - name: Non-web browser
+      SUPER-1: Ctrl-1
+      SUPER-2: Ctrl-2
+      SUPER-3: Ctrl-3
+      SUPER-4: Ctrl-4
+      SUPER-5: Ctrl-5
+      SUPER-6: Ctrl-6
+      SUPER-7: Ctrl-7
+      SUPER-8: Ctrl-8
+      SUPER-9: Ctrl-9
+      # This should only be for Roam Chrome PWA, but can't get window: matcher to work, so adding it here for entire Chrome application
+      SUPER-u: Ctrl-u
+  - name: Non-web browser and non-terminal
+    exact_match: true
     application:
-      not: [firefox, Google-chrome]
+      not: [firefox, Google-chrome, org.wezfurlong.wezterm]
     remap:
       SUPER-q: CTRL-q
       SUPER-w: CTRL-w
+  - name: Non-terminal
+    exact_match: true
+    application:
+      not: [org.wezfurlong.wezterm]
+    remap:
+      SUPER-c: Ctrl-c
+      SUPER-v: Ctrl-Shift-v
