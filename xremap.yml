@@ -34,6 +34,7 @@ keymap:
     application:
       only: firefox
     remap:
+      SUPER-l: Ctrl-l
       SUPER-n: Ctrl-n
       SUPER-t: Ctrl-t
       SUPER-w: CTRL-F4 
@@ -56,8 +57,9 @@ keymap:
   - name: Chrome
     exact_match: true
     application:
-      only: Google-chrome
+      only: google-chrome
     remap:
+      SUPER-l: Ctrl-l
       SUPER-t: Ctrl-t
       SUPER-w: CTRL-F4 
       SUPER-minus: Ctrl-minus
@@ -75,13 +77,20 @@ keymap:
       SUPER-9: Ctrl-9
       # This should only be for Roam Chrome PWA, but can't get window: matcher to work, so adding it here for entire Chrome application
       SUPER-u: Ctrl-u
+  - name: Roam Research (AUR version)
+    exact_match: true
+    application:
+      only: Roam Research
+    remap:
+      CTRL-f: right # Override Ctrl-f for find
+      SUPER-u: Ctrl-u
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
-      not: [firefox, Google-chrome, org.wezfurlong.wezterm]
+      not: [firefox, google-chrome, org.wezfurlong.wezterm]
     remap:
       SUPER-q: CTRL-q
-      SUPER-w: CTRL-w
+      SUPER-w: ALT-F4
   - name: Non-terminal
     exact_match: true
     application:
