@@ -40,6 +40,8 @@ keymap:
       SUPER-w: CTRL-F4 
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
+      Alt_R-minus: Ctrl-minus
+      Alt_R-equal: Ctrl-equal
       SUPER-leftbrace: Ctrl-leftbrace
       SUPER-rightbrace: Ctrl-rightbrace
       SUPER-1: M-1
@@ -77,6 +79,13 @@ keymap:
       SUPER-9: Ctrl-9
       # This should only be for Roam Chrome PWA, but can't get window: matcher to work, so adding it here for entire Chrome application
       SUPER-u: Ctrl-u
+      # Chrome on Wayland doesn't respect GTK Emacs bindings, so need to manually configure them
+      Ctrl-b: Left
+      # Ctrl-f: right
+      Ctrl-a: Home
+      Ctrl-e: End
+      Alt-f: Ctrl-Right
+      Alt-b: Ctrl-Left
   - name: Roam Research (AUR version)
     exact_match: true
     application:
@@ -84,6 +93,19 @@ keymap:
     remap:
       CTRL-f: right # Override Ctrl-f for find
       SUPER-u: Ctrl-u
+  - name: Roam Viewer (Chrome PWA)
+    exact_match: true
+    application:
+      only: chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default
+    remap:
+      Ctrl-a: Home
+      Ctrl-e: End
+      Alt-f: Ctrl-Right
+      Alt-b: Ctrl-Left
+      SUPER-minus: Ctrl-minus
+      SUPER-equal: Ctrl-equal
+      Alt_R-minus: Ctrl-minus
+      Alt_R-equal: Ctrl-equal
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
