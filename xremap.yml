@@ -84,6 +84,7 @@ keymap:
       # Ctrl-f: right
       Ctrl-a: Home
       Ctrl-e: End
+      Ctrl-h: Backspace
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
   - name: Roam Research (AUR version)
@@ -100,8 +101,15 @@ keymap:
     remap:
       Ctrl-a: Home
       Ctrl-e: End
+      Ctrl-f: Right
+      Ctrl-k: [Shift-end, delete]
+      Ctrl-Alt-S: PageDown
+      Ctrl-Alt-W: PageUp
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
+      Super-f: Ctrl-f
+      Super-g: Ctrl-g
+      Super-Shift-g: Ctrl-Shift-g
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
       Alt_R-minus: Ctrl-minus
