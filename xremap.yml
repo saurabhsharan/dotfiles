@@ -81,10 +81,12 @@ keymap:
       SUPER-u: Ctrl-u
       # Chrome on Wayland doesn't respect GTK Emacs bindings, so need to manually configure them
       Ctrl-b: Left
-      # Ctrl-f: right
+      Ctrl-f: right
+      Super-f: Ctrl-f
       Ctrl-a: Home
       Ctrl-e: End
       Ctrl-h: Backspace
+      Ctrl-k: [Shift-End, delete]
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
   - name: Roam Research (AUR version)
@@ -94,6 +96,18 @@ keymap:
     remap:
       CTRL-f: right # Override Ctrl-f for find
       SUPER-u: Ctrl-u
+  - name: Roam  Research (Chrome PWA)
+    exact_match: true
+    application:
+      only: chrome-lflgehidkjooeaeclhaadoefaleoeged-Default
+    remap:
+      Ctrl-a: Home
+      Ctrl-e: End
+      Ctrl-f: Right
+      Ctrl-b: Left
+      Ctrl-k: [Shift-End, delete]
+      Alt-f: Ctrl-Right
+      Alt-b: Ctrl-Left
   - name: Roam Viewer (Chrome PWA)
     exact_match: true
     application:
