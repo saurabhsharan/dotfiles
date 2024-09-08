@@ -22,6 +22,7 @@ keymap:
       Super-shift-left: Shift-Home
       Super-right: End
       Super-shift-right: Shift-End
+      Super-backspace: [Shift-Home, delete]
   - name: All except Nyxt
     exact_match: true
     application:
@@ -61,11 +62,20 @@ keymap:
     application:
       only: google-chrome
     remap:
+      Super-a: Ctrl-a
+      Super-d: Ctrl-d
+      Super-f: Ctrl-f
       SUPER-l: Ctrl-l
+      SUPER-r: Ctrl-r
       SUPER-t: Ctrl-t
+      Super-Shift-t: Ctrl-Shift-t
       SUPER-w: CTRL-F4 
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
+      Alt_R-minus: Ctrl-minus
+      Alt_R-equal: Ctrl-equal
+      SUPER-leftbrace: Alt-Left
+      SUPER-rightbrace: Alt-Right
       Alt_R-Shift-RightBrace: Ctrl-Tab
       Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
       SUPER-1: Ctrl-1
@@ -77,14 +87,12 @@ keymap:
       SUPER-7: Ctrl-7
       SUPER-8: Ctrl-8
       SUPER-9: Ctrl-9
-      # This should only be for Roam Chrome PWA, but can't get window: matcher to work, so adding it here for entire Chrome application
-      SUPER-u: Ctrl-u
       # Chrome on Wayland doesn't respect GTK Emacs bindings, so need to manually configure them
-      Ctrl-b: Left
-      Ctrl-f: right
-      Super-f: Ctrl-f
       Ctrl-a: Home
+      Ctrl-b: Left
+      Ctrl-d: Delete
       Ctrl-e: End
+      Ctrl-f: right
       Ctrl-h: Backspace
       Ctrl-k: [Shift-End, delete]
       Alt-f: Ctrl-Right
@@ -102,10 +110,13 @@ keymap:
       only: chrome-lflgehidkjooeaeclhaadoefaleoeged-Default
     remap:
       Ctrl-a: Home
+      Ctrl-b: Left
+      Ctrl-d: Delete
       Ctrl-e: End
       Ctrl-f: Right
-      Ctrl-b: Left
+      Ctrl-h: Backspace
       Ctrl-k: [Shift-End, delete]
+      Ctrl-u: [Shift-Home, delete]
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
   - name: Roam Viewer (Chrome PWA)
@@ -114,6 +125,7 @@ keymap:
       only: chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default
     remap:
       Ctrl-a: Home
+      Ctrl-d: Delete
       Ctrl-e: End
       Ctrl-f: Right
       Ctrl-k: [Shift-end, delete]
@@ -128,10 +140,18 @@ keymap:
       SUPER-equal: Ctrl-equal
       Alt_R-minus: Ctrl-minus
       Alt_R-equal: Ctrl-equal
+  - name: Zed Editor
+    exact_match: true
+    application:
+      only: dev.zed.Zed
+    remap:
+      Super-w: Ctrl-F4
+      Super-Shift-w: Ctrl-Shift-w
+      Super-Shift-p: Ctrl-Shift-p
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
-      not: [firefox, google-chrome, org.wezfurlong.wezterm]
+      not: [firefox, google-chrome, org.wezfurlong.wezterm, dev.zed.Zed]
     remap:
       SUPER-q: CTRL-q
       SUPER-w: ALT-F4
