@@ -11,8 +11,10 @@ keymap:
       # Mimic macOS
       M-left: Ctrl-left
       M-shift-left: Ctrl-Shift-left
+      M-Shift-b: Ctrl-Shift-Left
       M-right: Ctrl-right
-      M-shift-right: Ctrl-Shift-right
+      M-Shift-right: Ctrl-Shift-right
+      M-Shift-f: Ctrl-Shift-Right
       M-up: Ctrl-Home
       M-shift-up: Ctrl-Shift-Home
       M-down: Ctrl-End
@@ -133,8 +135,10 @@ keymap:
       Ctrl-Alt-W: PageUp
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
+      Super-a: Ctrl-a
       Super-f: Ctrl-f
       Super-g: Ctrl-g
+      Super-r: Ctrl-r
       Super-Shift-g: Ctrl-Shift-g
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
