@@ -10,9 +10,11 @@ keymap:
     remap:
       # Mimic macOS
       M-left: Ctrl-left
+      Ctrl-M-b: Ctrl-left
       M-shift-left: Ctrl-Shift-left
       M-Shift-b: Ctrl-Shift-Left
       M-right: Ctrl-right
+      Ctrl-M-f: Ctrl-right
       M-Shift-right: Ctrl-Shift-right
       M-Shift-f: Ctrl-Shift-Right
       M-up: Ctrl-Home
@@ -119,6 +121,7 @@ keymap:
       Ctrl-h: Backspace
       Ctrl-k: [Shift-End, delete]
       Ctrl-u: [Shift-Home, delete]
+      Super-a: Ctrl-a
       Alt-f: Ctrl-Right
       Alt-b: Ctrl-Left
   - name: Roam Viewer (Chrome PWA)
@@ -149,6 +152,7 @@ keymap:
     application:
       only: dev.zed.Zed
     remap:
+      Super-p: Ctrl-p
       Super-w: Ctrl-F4
       Super-Shift-w: Ctrl-Shift-w
       Super-Shift-p: Ctrl-Shift-p
