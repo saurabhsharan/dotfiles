@@ -27,6 +27,7 @@ keymap:
       Super-right: End
       Super-shift-right: Shift-End
       Super-backspace: [Shift-Home, delete]
+      Super-a: Ctrl-a
   - name: All except Nyxt
     exact_match: true
     application:
@@ -170,3 +171,4 @@ keymap:
     remap:
       SUPER-c: Ctrl-c
       SUPER-v: Ctrl-Shift-v
+      Super-x: Ctrl-x
