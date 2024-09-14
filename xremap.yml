@@ -73,6 +73,7 @@ keymap:
       SUPER-l: Ctrl-l
       SUPER-r: Ctrl-r
       SUPER-t: Ctrl-t
+      Super-Shift-a: Ctrl-Shift-a
       Super-Shift-t: Ctrl-Shift-t
       SUPER-w: CTRL-F4 
       SUPER-minus: Ctrl-minus
