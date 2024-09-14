@@ -5,7 +5,9 @@
 read -r -d '' PACKAGES <<EOM
 # dev tools
 btop
+cpufetch
 csvlens
+fastfetch
 fish
 git
 neovim
