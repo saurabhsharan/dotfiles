@@ -13,6 +13,21 @@ config.enable_scroll_bar = true
 
 config.hide_tab_bar_if_only_one_tab = true
 
+config.skip_close_confirmation_for_processes_named = {
+	-- default list from https://wezfurlong.org/wezterm/config/lua/config/skip_close_confirmation_for_processes_named.html
+	"bash",
+	"sh",
+	"zsh",
+	"fish",
+	"tmux",
+	"nu",
+	"cmd.exe",
+	"pwsh.exe",
+	"powershell.exe",
+	-- my custom additions
+	"btop",
+}
+
 config.font = wezterm.font("Source Code Pro", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 13
 config.warn_about_missing_glyphs = false
