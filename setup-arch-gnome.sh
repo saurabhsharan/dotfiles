@@ -4,18 +4,23 @@
 # Each line is a package, lines starting with # are comments
 read -r -d '' PACKAGES <<EOM
 # dev tools
-btop
-cpufetch
-csvlens
-fastfetch
 fish
 git
 neovim
-plocate
 rust
 starship
 the_silver_searcher
 wezterm
+
+# linux tools
+btop
+cpufetch
+csvlens
+dust
+exa
+fastfetch
+glow
+plocate
 
 # apps
 firefox
@@ -23,6 +28,7 @@ solaar
 
 # gnome
 gnome-browser-connector
+gnome-screenshot
 gnome-shell-extensions
 gnome-tweaks
 
@@ -75,7 +81,7 @@ EOF
 install_yay_packages() {
   echo "Installing Yay packages..."
   # Add AUR packages here
-  AUR_PACKAGES="cyme-bin google-chrome localsend-bin ulauncher"
+  AUR_PACKAGES="doggo-bin cyme-bin google-chrome localsend-bin ulauncher"
   su - $SUDO_USER -c "yay -S --needed --noconfirm $AUR_PACKAGES"
 }
 
