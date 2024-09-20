@@ -84,6 +84,8 @@ keymap:
       Alt_R-equal: Ctrl-equal
       SUPER-leftbrace: Alt-Left
       SUPER-rightbrace: Alt-Right
+      Alt_R-leftbrace: Alt-Left
+      Alt_R-rightbrace: Alt-Right
       Alt_R-Shift-RightBrace: Ctrl-Tab
       Alt_R-Shift-LeftBrace: Ctrl-Shift-Tab
       SUPER-1: Ctrl-1
