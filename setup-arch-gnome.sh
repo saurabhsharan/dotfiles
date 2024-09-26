@@ -20,6 +20,7 @@ dust
 exa
 fastfetch
 glow
+inxi
 plocate
 
 # apps
@@ -31,6 +32,7 @@ gnome-browser-connector
 gnome-screenshot
 gnome-shell-extensions
 gnome-tweaks
+libayatana-appindicator
 
 # wayland
 wl-clipboard
@@ -46,7 +48,9 @@ wavemon
 wireless_tools
 
 # media
+ffmpeg
 gst-plugin-openh264
+yt-dlp
 
 # system
 dbus
@@ -81,7 +85,7 @@ EOF
 install_yay_packages() {
   echo "Installing Yay packages..."
   # Add AUR packages here
-  AUR_PACKAGES="doggo-bin cyme-bin google-chrome localsend-bin ulauncher"
+  AUR_PACKAGES="doggo-bin cyme-bin google-chrome localsend-bin sioyek ulauncher"
   su - $SUDO_USER -c "yay -S --needed --noconfirm $AUR_PACKAGES"
 }
 
