@@ -13,6 +13,7 @@ the_silver_searcher
 wezterm
 
 # linux tools
+age
 btop
 cpufetch
 csvlens
@@ -24,8 +25,10 @@ inxi
 plocate
 
 # apps
+chromium
 firefox
 solaar
+vivaldi
 
 # gnome
 gnome-browser-connector
@@ -85,16 +88,22 @@ EOF
 install_yay_packages() {
   echo "Installing Yay packages..."
   # Add AUR packages here
-  AUR_PACKAGES="doggo-bin cyme-bin google-chrome localsend-bin sioyek ulauncher"
+  AUR_PACKAGES="doggo-bin cyme-bin localsend-bin sioyek ulauncher"
   su - $SUDO_USER -c "yay -S --needed --noconfirm $AUR_PACKAGES"
 }
 
 set_gnome_settings() {
   echo "Setting GNOME settings..."
 
+  gsettings set org.gnome.desktop.interface clock-show-seconds true
   gsettings set org.gnome.desktop.interface clock-show-weekday true
   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+  gsettings set org.gnome.desktop.interface enable-hot-corners false
 
+  gsettings set org.gnome.desktop.peripherals.keyboard delay 320
+  gsettings set org.gnome.desktop.peripherals.keyboard repeat true
+  gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 18
+  gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
   gsettings set org.gnome.desktop.peripherals.touchpad tap-and-drag false
 
   gsettings set org.gnome.desktop.wm.keybindings always-on-top "['<Super><Control>t']"
@@ -114,11 +123,14 @@ set_gnome_settings() {
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
 
   gsettings set org.gnome.mutter center-new-windows true
+  gsettings set org.gnome.mutter edge-tiling false
   gsettings set org.gnome.mutter dynamic-workspaces false
   gsettings set org.gnome.mutter overlay-key ''
+  gsettings set org.gnome.mutter workspaces-only-on-primary false
 
   gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Control><Super>q']" # lock screen shortcut
 
+  gsettings set org.gnome.shell.keybindings focus-active-notification "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-1 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-2 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-3 "[]"
