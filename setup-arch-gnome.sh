@@ -4,8 +4,11 @@
 # Each line is a package, lines starting with # are comments
 read -r -d '' PACKAGES <<EOM
 # dev tools
+alacritty
+cmake
 fish
 git
+lazygit
 neovim
 rust
 starship
@@ -22,13 +25,17 @@ exa
 fastfetch
 glow
 inxi
+neofetch
 plocate
+tldr
+rclone
 
 # apps
 chromium
 firefox
 solaar
 vivaldi
+vlc
 
 # gnome
 gnome-browser-connector
@@ -58,6 +65,7 @@ yt-dlp
 # system
 dbus
 libxkbcommon
+pacman-contrib
 # adds Power Mode to GNOME Settings
 power-profiles-daemon
 wxwidgets-gtk3
@@ -118,6 +126,8 @@ set_gnome_settings() {
   gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "['<Control>1']"
   gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-2 "['<Control>2']"
   gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+  gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+  gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
   gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
 
   gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:appmenu'
@@ -128,9 +138,21 @@ set_gnome_settings() {
   gsettings set org.gnome.mutter overlay-key ''
   gsettings set org.gnome.mutter workspaces-only-on-primary false
 
+  gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]"
+  gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
+
   gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Control><Super>q']" # lock screen shortcut
 
   gsettings set org.gnome.shell.keybindings focus-active-notification "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-1 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-2 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-3 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-4 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-5 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-6 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-7 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-8 "[]"
+  gsettings set org.gnome.shell.keybindings open-new-window-application-9 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-1 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-2 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-3 "[]"
@@ -140,6 +162,11 @@ set_gnome_settings() {
   gsettings set org.gnome.shell.keybindings switch-to-application-7 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-8 "[]"
   gsettings set org.gnome.shell.keybindings switch-to-application-9 "[]"
+  gsettings set org.gnome.shell.keybindings toggle-application-view "[]"
+  # toggle-message-tray also clears the shortcut for "System > Show the notification list"
+  gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
+  gsettings set org.gnome.shell.keybindings toggle-overview "[]"
+  gsettings set org.gnome.shell.keybindings toggle-quick-settings "[]"
 }
 
 install_gnome_extensions() {
