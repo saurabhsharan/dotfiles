@@ -92,6 +92,7 @@ keymap:
       Super-Shift-a: Ctrl-Shift-a
       Super-Shift-c: Ctrl-Shift-c
       Super-Shift-t: Ctrl-Shift-t
+      Super-Alt-i: Ctrl-Shift-i
       SUPER-w: CTRL-F4 
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
