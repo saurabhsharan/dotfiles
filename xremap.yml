@@ -80,17 +80,20 @@ keymap:
   - name: Chrome
     exact_match: true
     application:
-      only: google-chrome
+      only: chromium
     remap:
       Super-a: Ctrl-a
       Super-d: Ctrl-d
       Super-f: Ctrl-f
       Super-g: Ctrl-g
       SUPER-l: Ctrl-l
+      Super-n: Ctrl-n
       SUPER-r: Ctrl-r
       SUPER-t: Ctrl-t
       Super-Shift-a: Ctrl-Shift-a
       Super-Shift-c: Ctrl-Shift-c
+      Super-Shift-n: Ctrl-Shift-n
+      Super-Shift-o: Ctrl-Shift-o
       Super-Shift-t: Ctrl-Shift-t
       Super-Alt-i: Ctrl-Shift-i
       SUPER-w: CTRL-F4 
@@ -181,7 +184,7 @@ keymap:
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
-      not: [firefox, google-chrome, org.wezfurlong.wezterm, dev.zed.Zed]
+      not: [firefox, google-chrome, Vivaldi-stable, org.wezfurlong.wezterm, dev.zed.Zed]
     remap:
       SUPER-q: CTRL-q
       SUPER-w: ALT-F4
