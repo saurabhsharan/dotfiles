@@ -10,6 +10,8 @@ fish
 git
 lazygit
 neovim
+ruby
+ruby-irb
 rust
 starship
 the_silver_searcher
@@ -21,6 +23,7 @@ btop
 cpufetch
 csvlens
 dust
+evtest
 exa
 fastfetch
 glow
@@ -28,7 +31,9 @@ inxi
 neofetch
 plocate
 tldr
+tree
 rclone
+vi
 
 # apps
 chromium
@@ -60,6 +65,7 @@ wireless_tools
 # media
 ffmpeg
 gst-plugin-openh264
+perl-image-exiftool
 yt-dlp
 
 # system
