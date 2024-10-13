@@ -1,0 +1,25 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "super-/": ["editor::ToggleComments", { "advance_downwards": false }],
+      "super-s": "workspace::Save",
+      "super-shift-b": "project_panel::ToggleFocus",
+      "super-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "super-{": "pane::ActivatePrevItem",
+      "super-}": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "super-shift-o": "outline::Toggle"
+    }
+  }
+]
