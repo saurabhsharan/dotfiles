@@ -147,6 +147,11 @@ set_gnome_settings() {
   gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]"
   gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
 
+  gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier "[]"
+  gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in "[]"
+  gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out "[]"
+  gsettings set org.gnome.settings-daemon.plugins.media-keys on-screen-keyboard "[]"
+  gsettings set org.gnome.settings-daemon.plugins.media-keys screenreader "[]"
   gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Control><Super>q']" # lock screen shortcut
 
   gsettings set org.gnome.shell.keybindings focus-active-notification "[]"
