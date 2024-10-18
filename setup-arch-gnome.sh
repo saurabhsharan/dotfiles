@@ -5,6 +5,7 @@
 read -r -d '' PACKAGES <<EOM
 # dev tools
 alacritty
+atuin
 cmake
 fish
 git
@@ -54,6 +55,12 @@ wl-clipboard
 
 # fonts
 adobe-source-code-pro-fonts
+# international fonts via https://gist.github.com/AntonFriberg/9e67269639b5ba3b2020c2396eb35216 (see comment about sans-serif version)
+adobe-source-han-sans-cn-fonts
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+adobe-source-han-sans-otc-fonts
+adobe-source-han-sans-tw-fonts
 nerd-fonts
 
 # networking
