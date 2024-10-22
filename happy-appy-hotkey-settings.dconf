@@ -1,0 +1,14 @@
+[/]
+app-0='Chromium'
+app-1='RoamViewer'
+app-2='Roam Research'
+app-3='Zed'
+app-4='kitty'
+hotkey-0=['<Alt><Super>1']
+hotkey-1=['<Alt><Super>2']
+hotkey-2=['<Alt><Super>3']
+hotkey-3=['<Alt><Super>9']
+hotkey-4=['<Alt><Super>8']
+hotkey-unbound-cycle=['<Alt><Super>grave']
+number=5
+restrict-to-current-workspace=true
