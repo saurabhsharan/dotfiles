@@ -14,12 +14,12 @@ set -gx EXA_GRID_ROWS 10000000
 
 # `cdf` will change shell's current directory to frontmost Finder window
 function cdf
-  cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
+    cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
 end
 
 # via https://mastodon.online/@nikitonsky/111421674555445464
 function ckdir
-  mkdir -p $argv[1] && cd $argv[1]
+    mkdir -p $argv[1] && cd $argv[1]
 end
 
 # `f` will open current directory in new Finder window
@@ -34,6 +34,8 @@ alias gfa="git fetch --all"
 alias gcd="git clone --depth 1"
 alias gpf="git pull --ff-only"
 alias git-my-branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | grep -i saurabh"
+
+alias rcp="rclone copy --ignore-existing --progress"
 
 alias ls-dir="ls -d */"
 alias lsd="ls-dir"
