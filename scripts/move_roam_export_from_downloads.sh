@@ -21,7 +21,7 @@ execute_command() {
 }
 
 # Find the most recent saurabhs-*.json file
-LATEST_JSON=$(find "$DOWNLOAD_DIR" -name "saurabhs-*.json" -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" ")
+LATEST_JSON=$(find "$DOWNLOAD_DIR" -maxdepth 1 -name "saurabhs-*.json" -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" ")
 
 if [ -z "$LATEST_JSON" ]; then
   echo "No saurabhs-*.json file found in $DOWNLOAD_DIR"
