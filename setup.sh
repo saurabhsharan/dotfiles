@@ -4,8 +4,7 @@
 # prompt code via https://stackoverflow.com/a/1885534
 read -p "Make sure that the current terminal app ($TERM_PROGRAM) has full disk access (System Settings > Privacy & Security > Full Disk Access) before continuing. Type y to continue: " -n 1 -r
 echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
   exit 1
 fi
 
@@ -47,6 +46,10 @@ defaults write com.apple.dock slow-motion-allowed -bool true
 defaults write com.apple.universalaccess showWindowTitlebarIcons -bool true
 # Remove rollover delay from title bar icon (even though should always appear from above command)
 defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
+# Disable automatic app termination system-wide
+# via https://msgfiler.wordpress.com/2024/09/24/fix-msgfiler-4s-random-quitting-on-macos/
+defaults write -g NSDisableAutomaticTermination -bool yes
 
 # Always expand open/save dialogs
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
