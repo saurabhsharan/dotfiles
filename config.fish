@@ -35,7 +35,10 @@ alias gcd="git clone --depth 1"
 alias gpf="git pull --ff-only"
 alias git-my-branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | grep -i saurabh"
 
-alias rcp="rclone copy --ignore-existing --progress"
+set -gx RCLONE_IGNORE_EXISTING true
+set -gx RCLONE_EXCLUDE ".directory"
+set -gx RCLONE_PROGRESS true
+alias rcp="rclone copy"
 
 alias ls-dir="ls -d */"
 alias lsd="ls-dir"
