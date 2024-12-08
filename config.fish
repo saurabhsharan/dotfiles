@@ -17,6 +17,12 @@ function cdf
     cd (osascript -e 'tell application "Finder" to get POSIX path of (target of front Finder window as text)')
 end
 
+# `ffile` prints path of selected file in Finder
+# via https://alexwlchan.net/2024/finder-terminal-tools
+function ffile
+    osascript -e 'tell application "Finder" to get POSIX path of first item of (selection as alias list)'
+end
+
 # via https://mastodon.online/@nikitonsky/111421674555445464
 function ckdir
     mkdir -p $argv[1] && cd $argv[1]
