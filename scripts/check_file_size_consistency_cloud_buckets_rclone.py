@@ -3,6 +3,7 @@
 # Verifies that files with the same name have the same file size across different cloud buckets.
 # Usage: ./check_file_size_consistency_cloud_buckets_rclone.py <rclone-bucket-1> <rclone-bucket-2>
 
+import os
 import subprocess
 import sys
 from collections import defaultdict
@@ -29,10 +30,14 @@ def parse_rclone_output(output: str) -> Dict[str, int]:
 def get_bucket_contents(bucket: str) -> Dict[str, int]:
     """Run rclone ls for given bucket and return parsed results."""
     try:
+        process_env = os.environ.copy()
+        if 'RCLONE_PROGRESS' in process_env:
+            del process_env['RCLONE_PROGRESS']
         result = subprocess.run(['rclone', 'ls', bucket],
                               capture_output=True,
                               text=True,
-                              check=True)
+                              check=True,
+                              env=process_env)
         return parse_rclone_output(result.stdout)
     except subprocess.CalledProcessError as e:
         print(f"Error running rclone for bucket {bucket}: {e}", file=sys.stderr)
