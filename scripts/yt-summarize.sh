@@ -1,22 +1,28 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-set -x
+
+# Check if URL is provided
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 <youtube-url>"
+  exit 1
+fi
 
 YOUTUBE_URL=$1
 
-OUTPUT_FILE="audio.m4a"
-CONVERTED_AUDIO_FILE="audio-conv.wav"
+# Get video title and clean it up
+CLEAN_TITLE=$(yt-dlp --get-title "$YOUTUBE_URL" 2>/dev/null |
+  tr '[:upper:]' '[:lower:]' |
+  tr -cd '[:alnum:] -' |
+  tr ' ' '-' |
+  tr -s '-')
 
-TRANSCRIPT_FILENAME="transcript"
+OUTPUT_FILE="${CLEAN_TITLE}.m4a"
 
-yt-dlp -f 'bestaudio[ext=m4a]' "$YOUTUBE_URL" -o "$OUTPUT_FILE" > /dev/null
+echo $OUTPUT_FILE
 
-ffmpeg -i "$OUTPUT_FILE" -y -ar 16000 -ac 1 -c:a pcm_s16le "$CONVERTED_AUDIO_FILE" > /dev/null
+yt-dlp -f 'bestaudio[ext=m4a]' "$YOUTUBE_URL" -o "$OUTPUT_FILE" 2>/dev/null
 
-~/Downloads/whisper.cpp/main -m ~/Downloads/whisper.cpp/models/ggml-base.en.bin -f "$CONVERTED_AUDIO_FILE" --no-timestamps --threads 6 -otxt -of "$TRANSCRIPT_FILENAME"
+mlx_whisper --model mlx-community/whisper-large-v3-turbo --verbose False "$OUTPUT_FILE"
 
-cat "$TRANSCRIPT_FILENAME.txt" | llm -t summarize
-
-rm "$OUTPUT_FILE"
-rm "$CONVERTED_AUDIO_FILE"
+cat "$CLEAN_TITLE.txt" | llm -t summarize
