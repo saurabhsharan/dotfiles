@@ -186,7 +186,7 @@ keymap:
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
-      not: [firefox, google-chrome, Vivaldi-stable, org.wezfurlong.wezterm, dev.zed.Zed, kitty]
+      not: [firefox, google-chrome, chromium, Vivaldi-stable, org.wezfurlong.wezterm, dev.zed.Zed, kitty, com.mitchellh.ghostty]
     remap:
       SUPER-q: CTRL-q
       SUPER-w: ALT-F4
