@@ -60,7 +60,7 @@ keymap:
       SUPER-l: Ctrl-l
       SUPER-n: Ctrl-n
       SUPER-t: Ctrl-t
-      SUPER-w: CTRL-F4 
+      SUPER-w: Ctrl-w
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
       Alt_R-minus: Ctrl-minus
@@ -98,7 +98,7 @@ keymap:
       Super-Shift-o: Ctrl-Shift-o
       Super-Shift-t: Ctrl-Shift-t
       Super-Alt-i: Ctrl-Shift-i
-      SUPER-w: CTRL-F4 
+      SUPER-w: Ctrl-w
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
       Alt_R-minus: Ctrl-minus
@@ -147,6 +147,7 @@ keymap:
       Ctrl-f: Right
       Ctrl-h: Backspace
       Ctrl-k: [Shift-End, delete]
+      Ctrl-n: Down
       Ctrl-u: [Shift-Home, delete]
       Super-a: Ctrl-a
       Alt-f: Ctrl-Right
@@ -160,6 +161,7 @@ keymap:
       Ctrl-d: Delete
       Ctrl-e: End
       Ctrl-f: Right
+      Ctrl-h: Backspace
       Ctrl-k: [Shift-end, delete]
       Ctrl-Alt-S: PageDown
       Ctrl-Alt-W: PageUp
@@ -179,8 +181,18 @@ keymap:
     application:
       only: dev.zed.Zed
     remap:
+      Ctrl-a: Home
+      Ctrl-b: Left
+      Ctrl-e: End
+      Ctrl-f: Right
+      Ctrl-n: Down
+      Ctrl-p: Up
+      Super-c: Ctrl-c
       Super-p: Ctrl-p
-      Super-w: Ctrl-F4
+      Super-s: Ctrl-s
+      Super-v: Ctrl-v
+      Super-w: Ctrl-w
+      Super-x: Ctrl-x
       Super-Shift-w: Ctrl-Shift-w
       Super-Shift-p: Ctrl-Shift-p
   - name: Non-web browser and non-terminal
@@ -193,7 +205,7 @@ keymap:
   - name: Non-terminal
     exact_match: true
     application:
-      not: [org.wezfurlong.wezterm]
+      not: [org.wezfurlong.wezterm, dev.zed.Zed]
     remap:
       SUPER-c: Ctrl-c
       SUPER-v: Ctrl-Shift-v
