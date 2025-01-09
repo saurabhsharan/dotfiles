@@ -193,12 +193,23 @@ keymap:
       Super-v: Ctrl-v
       Super-w: Ctrl-w
       Super-x: Ctrl-x
+      Super-z: Ctrl-z
       Super-Shift-w: Ctrl-Shift-w
       Super-Shift-p: Ctrl-Shift-p
+  - name: IntelliJ
+    exact_match: true
+    application:
+      only: jetbrains-idea
+    remap:
+      Super-e: Ctrl-e
+      Super-s: Ctrl-s
+      Super-w: Ctrl-4
+      Super-z: Ctrl-z
+      Super-Shift-o: Ctrl-Shift-n
   - name: Non-web browser and non-terminal
     exact_match: true
     application:
-      not: [firefox, google-chrome, chromium, Vivaldi-stable, org.wezfurlong.wezterm, dev.zed.Zed, kitty, com.mitchellh.ghostty]
+      not: [firefox, google-chrome, chromium, Vivaldi-stable, org.wezfurlong.wezterm, dev.zed.Zed, jetbrains-idea, kitty, com.mitchellh.ghostty]
     remap:
       SUPER-q: CTRL-q
       SUPER-w: ALT-F4
