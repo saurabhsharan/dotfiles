@@ -31,6 +31,8 @@ end
 # `f` will open current directory in new Finder window
 alias f='open -a Finder .'
 
+alias j="z"
+
 alias g="git"
 alias gs="git status -sb"
 alias gcd="git clone --depth 1"
@@ -42,7 +44,7 @@ alias gpf="git pull --ff-only"
 alias git-my-branches="git for-each-ref --format=' %(authorname) %09 %(refname)' --sort=authorname | grep -i saurabh"
 
 set -gx RCLONE_IGNORE_EXISTING true
-set -gx RCLONE_EXCLUDE ".directory"
+set -gx RCLONE_EXCLUDE ".directory,.DS_Store"
 set -gx RCLONE_PROGRESS true
 alias rcp="rclone copy"
 
@@ -81,3 +83,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
+
+alias firefly-up="cd ~/Downloads/firefly3 && docker-compose -f docker-compose.yml up -d --pull=always"
+alias firefly-down="cd ~/Downloads/firefly3 && docker-compose -f docker-compose.yml down"
