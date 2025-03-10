@@ -153,6 +153,7 @@ defaults write com.apple.dt.Xcode XcodeCloudUpsellPromptEnabled -bool false
 # Install app-specific keyboard shortcuts
 # https://apple.stackexchange.com/questions/398561/how-to-set-system-keyboard-shortcuts-via-command-line
 # Note that the -array-add command is not idempotent, and there's no built-in defaults -array-remove, so if this runs multiple times may have to do some manual cleanup by clearing the custommenu.apps array and re-adding everything from scratch
+# Ctrl = ^, Opt = ~, Cmd = @, Shift = \$
 
 # Orion.app: Window > Move Tab > New Window is Opt+Shift+Cmd+M
 # N.B. the full menu path is needed since just "New Window" conflicts with File > New Window
@@ -187,6 +188,10 @@ defaults write com.barebones.bbedit NSUserKeyEquivalents -dict-add "Remove Note"
 # Google Chrome: Tab > Pin Tab is Opt+Cmd+P
 defaults write com.google.Chrome com.apple.custommenu.apps -array-add "com.google.Chrome"
 defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Pin Tab" -string "~@p"
+
+# RoamViewer PWA: View > Always Show Toolbar in Full Screen is Ctrl+Opt+Cmd+. (or any other unused shortcut)
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array-add "com.google.Chrome.app.jcgpenhgafmhijpfmgmlcacapeaofcdf"
+defaults write com.google.Chrome.app.jcgpenhgafmhijpfmgmlcacapeaofcdf NSUserKeyEquivalents -dict-add "Always Show Toolbar in Full Screen" -string "^~@."
 
 # iTerm2 defaults
 defaults write com.googlecode.iterm2 QuitWhenAllWindowsClosed -bool true
