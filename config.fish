@@ -28,6 +28,66 @@ function ckdir
     mkdir -p $argv[1] && cd $argv[1]
 end
 
+function age-passphrase-encrypt
+    if test (count $argv) -ne 1
+        echo "Usage: age-passphrase-encrypt <file>"
+        return 1
+    end
+
+    set -l input_file $argv[1]
+    set -l output_file "$input_file.age"
+
+    echo "+ age --passphrase --output $output_file $input_file"
+    age --passphrase --output $output_file $input_file
+end
+
+function github-mirror
+    # Check if a URL was provided
+    if test -z "$argv[1]"
+        echo "Error: Please provide a GitHub repository URL"
+        echo "Usage: github-mirror https://github.com/username/repo-name"
+        return 1
+    end
+
+    # Extract the repo name from the URL
+    set repo_url $argv[1]
+
+    # Extract just the repo name from the URL (last part)
+    set repo_name (string match -r '[^/]+$' $repo_url)
+
+    # If no repo name could be extracted, exit with an error
+    if test -z "$repo_name"
+        echo "Error: Could not extract repository name from URL"
+        return 1
+    end
+
+    # Get today's date in YYYY-MM-DD format
+    set today_date (date +%Y-%m-%d)
+
+    # Format the directory and tar file names
+    set dir_name "$today_date-$repo_name"
+    set tar_name "$dir_name.tar.gz"
+
+    # Run the commands
+    echo "Cloning repository to $dir_name..."
+    git clone --mirror $repo_url $dir_name
+
+    if test $status -ne 0
+        echo "Error: Failed to clone the repository"
+        return 1
+    end
+
+    echo "Creating archive $tar_name..."
+    tar -czf $tar_name $dir_name
+
+    if test $status -ne 0
+        echo "Error: Failed to create the archive"
+        return 1
+    end
+
+    echo "Successfully created mirror clone archive: $tar_name"
+end
+
 # `f` will open current directory in new Finder window
 alias f='open -a Finder .'
 
