@@ -1,6 +1,7 @@
 github.com##.code-navigation-cursor
 
 ||accounts.google.com/gsi/iframe/select$subdocument
+||accounts.google.com/gsi/*$xhr,script,3p
 
 x.com##[aria-label$="trending now" i]
 x.com##[aria-label$="who to follow" i]
