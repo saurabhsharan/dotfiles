@@ -92,13 +92,13 @@ keymap:
       Super-n: Ctrl-n
       SUPER-r: Ctrl-r
       SUPER-t: Ctrl-t
+      SUPER-w: Ctrl-F4
       Super-Shift-a: Ctrl-Shift-a
       Super-Shift-c: Ctrl-Shift-c
       Super-Shift-n: Ctrl-Shift-n
       Super-Shift-o: Ctrl-Shift-o
       Super-Shift-t: Ctrl-Shift-t
       Super-Alt-i: Ctrl-Shift-i
-      SUPER-w: Ctrl-w
       SUPER-minus: Ctrl-minus
       SUPER-equal: Ctrl-equal
       Alt_R-minus: Ctrl-minus
