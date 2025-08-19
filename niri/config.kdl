@@ -25,7 +25,7 @@ input {
     mouse {
         // off
         // natural-scroll
-        // accel-speed 0.2
+        accel-speed 0.28
         // accel-profile "flat"
         // scroll-method "no-scroll"
     }
@@ -170,6 +170,24 @@ window-rule {
     open-floating true
 }
 
+// Open LocalSend as floating
+window-rule {
+    match app-id="localsend"
+    open-floating true
+}
+
+// Firefox
+window-rule {
+  match app-id="firefox"
+  default-column-width { fixed 1600; }
+}
+
+// RoamViewer
+window-rule {
+    match app-id="FFPWA-01K2BDNGRZTA515ZYT2BAB7RHB"
+    default-column-width { fixed 1170; }
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -243,7 +261,7 @@ binds {
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    // Mod+Ctrl+F { expand-column-to-available-width; }
+    Alt+Mod+F { expand-column-to-available-width; }
 
     // Alt+C { center-column; }
     Ctrl+Alt+Super+C { center-visible-columns; }
@@ -292,7 +310,7 @@ binds {
     //
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    // Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
