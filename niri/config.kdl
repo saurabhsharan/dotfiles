@@ -179,7 +179,13 @@ window-rule {
 // Firefox
 window-rule {
   match app-id="firefox"
-  default-column-width { fixed 1600; }
+  default-column-width { fixed 1717; }
+}
+
+// Ghostty
+window-rule {
+  match app-id="com.mitchellh.ghostty"
+  default-column-width { fixed 1417; }
 }
 
 // RoamViewer
@@ -232,7 +238,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     // Mod+O repeat=false { toggle-overview; }
 
-    // Mod+Q { close-window; }
+    Alt+Mod+W { close-window; }
 
     Ctrl+M     { focus-column-right-or-first; }
     Ctrl+Mod+M     { focus-column-left-or-last; }
