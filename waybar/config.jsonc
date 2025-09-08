@@ -1,0 +1,50 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 0,
+    
+    // Module positioning - everything aligned to the right
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["tray", "network", "clock"],
+    
+    // Tray configuration for app icons
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8,
+        "show-passive-items": true
+    },
+    
+    // Network/WiFi configuration
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰤮 Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\n{bandwidthUpBits} ↑ {bandwidthDownBits} ↓",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: {ipaddr}/{cidr}\n{bandwidthUpBits} ↑ {bandwidthDownBits} ↓",
+        "on-click": "nm-connection-editor",
+        "max-length": 30
+    },
+    
+    // Clock/Date configuration
+    "clock": {
+        "format": "{:%a %b %d %I:%M:%S %p}",
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99a1d9'><b>W{}</b></span>",
+                "weekdays": "<span color='#ff9f1c'><b>{}</b></span>",
+                "today": "<span color='#ff3333'><b><u>{}</u></b></span>"
+            }
+        }
+    }
+}
