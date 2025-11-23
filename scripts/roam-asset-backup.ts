@@ -16,7 +16,12 @@ async function downloadImage(url: string, outputPath: string): Promise<void> {
     responseType: "stream",
   });
 
-  response.data.pipe(fs.createWriteStream(outputPath));
+  return new Promise((resolve, reject) => {
+    const writer = fs.createWriteStream(outputPath);
+    response.data.pipe(writer);
+    writer.on('finish', resolve);
+    writer.on('error', reject);
+  });
 }
 
 // Fix regex (and roam) bug where the `)` is part of the URL
@@ -34,7 +39,7 @@ async function main() {
   }
 
   const fileContent = fs.readFileSync(JSON_FILE, "utf8");
-  const regex = new RegExp(`${BASE_URL}[^", ]+`, "g");
+  const regex = new RegExp(`${BASE_URL}[^", )]+`, "g");
   const matches = fileContent.match(regex);
 
   if (matches) {
