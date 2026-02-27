@@ -1,5 +1,7 @@
 # saurabh's dotfiles
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/saurabhsharan/dotfiles)
+
 | File | Description | Location | Notes |
 | --- | --- | --- | --- |
 | .agignore | file ignore list for [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) | `~/.agignore` | |
