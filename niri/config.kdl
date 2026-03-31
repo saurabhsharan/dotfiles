@@ -8,8 +8,8 @@ input {
         xkb {
         }
 
-        repeat-delay 350
-        repeat-rate 18
+        repeat-delay 210
+        repeat-rate 22
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
@@ -20,6 +20,10 @@ input {
         tap
         drag false
         accel-speed 0.34
+
+        // Also enable clicking with two-fingers to get right-click
+        // Without this, can only tap with two fingers for right-click, but not actual press down / click with two fingers (at least on the Framework 13 touchpad)
+        click-method "clickfinger"
     }
 
     mouse {
@@ -85,7 +89,7 @@ layout {
         // off
 
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 1
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -136,7 +140,7 @@ layout {
 }
 
 spawn-at-startup "waybar"
-spawn-at-startup "niriswitcher"
+// xremap runs via systemd --user xremap.service after graphical-session.target.
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -153,12 +157,25 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
+recent-windows {
+    open-delay-ms 80
+
+    highlight {
+        padding 10
+        corner-radius 3
+    }
+
+    previews {
+        max-scale 0.22
+    }
+}
+
 animations {
     // Uncomment to turn off all animations.
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    slowdown 0.45
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -176,24 +193,6 @@ window-rule {
     open-floating true
 }
 
-// Firefox
-window-rule {
-  match app-id="firefox"
-  default-column-width { fixed 1717; }
-}
-
-// Ghostty
-window-rule {
-  match app-id="com.mitchellh.ghostty"
-  default-column-width { fixed 1417; }
-}
-
-// RoamViewer
-window-rule {
-    match app-id="FFPWA-01K2BDNGRZTA515ZYT2BAB7RHB"
-    default-column-width { fixed 1170; }
-}
-
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -208,7 +207,7 @@ window-rule {
 
 // Enable rounded corners for all windows.
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 16
     clip-to-geometry true
 }
 
@@ -216,10 +215,6 @@ window-rule {
 // Note: the entire command goes as a single argument in the end.
 // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
 binds {
-    // niriswitcher
-    Mod+Tab repeat=false { spawn "gdbus" "call" "--session" "--dest" "io.github.isaksamsten.Niriswitcher" "--object-path" "/io/github/isaksamsten/Niriswitcher" "--method" "io.github.isaksamsten.Niriswitcher.application" ; }
-    Mod+Shift+Tab repeat=false { spawn "gdbus" "call" "--session" "--dest" "io.github.isaksamsten.Niriswitcher" "--object-path" "/io/github/isaksamsten/Niriswitcher" "--method" "io.github.isaksamsten.Niriswitcher.application" ; }
-
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -259,6 +254,10 @@ binds {
     // touchpads by default.
     Mod+Shift+TouchpadScrollDown { focus-column-left; }
     Mod+Shift+TouchpadScrollUp   { focus-column-right; }
+
+    // Keyboard Scrolling (beta)
+    Ctrl+Q { inject-scroll-up speed=10; }
+    Ctrl+S { inject-scroll-down speed=10; }
 
     // Consume one window from the right to the bottom of the focused column.
     // Mod+Comma  { consume-window-into-column; }
@@ -304,7 +303,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    // Print { screenshot; }
+    Print { screenshot; }
     // Ctrl+Print { screenshot-screen; }
     // Alt+Print { screenshot-window; }
 
