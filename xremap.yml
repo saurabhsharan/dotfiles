@@ -82,7 +82,7 @@ keymap:
   - name: Chrome
     exact_match: true
     application:
-      only: chromium
+      only: [chromium, google-chrome]
     remap:
       Super-a: Ctrl-a
       Super-d: Ctrl-d
@@ -93,6 +93,7 @@ keymap:
       SUPER-r: Ctrl-r
       SUPER-t: Ctrl-t
       SUPER-w: Ctrl-F4
+      Super-comma: Ctrl-Shift-comma
       Super-Shift-a: Ctrl-Shift-a
       Super-Shift-c: Ctrl-Shift-c
       Super-Shift-n: Ctrl-Shift-n
@@ -155,7 +156,7 @@ keymap:
   - name: Roam Viewer (Chrome PWA)
     exact_match: true
     application:
-      only: chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default
+      only: [chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default, chrome-nmhgeifmehldnegmaackjamblpjkcpmh-Default]
     remap:
       Ctrl-a: Home
       Ctrl-d: Delete
