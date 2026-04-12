@@ -139,8 +139,22 @@ layout {
     }
 }
 
+output "Apple Computer Inc StudioDisplay 0x32E9DE9D" {
+    scale 2
+}
+// DP-8 is a phantom display that's created when connecting to Studio Display
+output "DP-8" {
+    off
+}
+
 spawn-at-startup "waybar"
+spawn-at-startup "~/.local/bin/vicinae" "server"
 // xremap runs via systemd --user xremap.service after graphical-session.target.
+
+debug {
+    // for vicinae https://docs.vicinae.com/quickstart/niri#focus-window-on-activation
+    honor-xdg-activation-with-invalid-serial
+}
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -185,6 +199,12 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+// roam-viewer-js pwa
+window-rule {
+    match app-id="chrome-nmhgeifmehldnegmaackjamblpjkcpmh-Default"
+    default-column-width { fixed 1178; }
 }
 
 // Open LocalSend as floating
@@ -232,6 +252,11 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     // Mod+O repeat=false { toggle-overview; }
+
+    // Vincinae launcher
+    Mod+Space repeat=false { spawn "~/.local/bin/vicinae" "toggle"; }
+    Alt+Space repeat=false { spawn "~/.local/bin/vicinae" "vicinae://launch/files/search"; }
+    Alt+Shift+V repeat=false { spawn "~/.local/bin/vicinae" "vicinae://launch/clipboard/history"; }
 
     Alt+Mod+W { close-window; }
 
