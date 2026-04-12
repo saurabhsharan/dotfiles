@@ -192,5 +192,17 @@ class RoamViewerPWA(Chrome):
     exact_match = True
     application = App(only=["chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default", "chrome-nmhgeifmehldnegmaackjamblpjkcpmh-Default"])
 
+class ChatWise(Keymap):
+    name = "ChatWise"
+    exact_match = True
+    application = App(only=["ChatWise"])
+    remap = {
+        "Super-b": "Ctrl-b", # toggle sidebar
+        "Super-n": "Ctrl-n", # new chat
+        "Super-comma": "Ctrl-comma", # open settings
+        "Super-enter": "Ctrl-enter", # send message
+        "Super-slash": "Ctrl-slash", # model switcher
+    }
+
 if __name__ == "__main__":
     compile_config("config.yml")
