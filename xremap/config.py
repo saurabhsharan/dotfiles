@@ -20,7 +20,9 @@ APPLE_KEYBOARDS = [
 ]
 
 TERMINALS = ["org.wezfurlong.wezterm", "kitty", "com.mitchellh.ghostty"]
+FIREFOX_BROWSERS = ["firefox"]
 CHROME_BROWSERS = ["chromium", "google-chrome"]
+ALL_BROWSERS = FIREFOX_BROWSERS + CHROME_BROWSERS
 
 # ==========================================
 # MODMAPS (Hardware Key Reassignments)
@@ -108,10 +110,6 @@ class GlobalBindings(Keymap):
     remap = MAC_TEXT_NAVIGATION | {
         "Ctrl-i": "up",
         "Ctrl-j": "down",
-    } | {
-        "Super-c": "Ctrl-c", # copy
-        "Super-v": "Ctrl-v", # paste
-        "Super-x": "Ctrl-x", # cut
     }
 
 class EmacsBindings(Keymap):
@@ -120,6 +118,26 @@ class EmacsBindings(Keymap):
     # Exclude terminal emulators from Emacs bindings since they are often already built-in and/or conflict with the shell/editor
     application = App(not_=TERMINALS)
     remap = EMACS_NAV
+
+class ClipboardBindings(Keymap):
+    name = "Clipboard bindings"
+    exact_match = True
+    # Exclude terminal emulators from clipboard bindings since they often have bespoke clipboard shortcuts
+    application = App(not_=TERMINALS)
+    remap = {
+        "Super-c": "Ctrl-c", # copy
+        "Super-v": "Ctrl-v", # paste
+        "Super-x": "Ctrl-x", # cut
+    }
+
+class CloseWindowBinding(Keymap):
+    name = "Close Window binding"
+    exact_match = True
+    # Excluse browsers and terminals from Super+W since we override that with app-specific shortcut to close current tab
+    application = App(not_=(ALL_BROWSERS + TERMINALS))
+    remap = {
+        "Super-w": "Alt-Super-w", # close window (Niri)
+    }
 
 class BaseBrowser(Keymap):
     is_base = True
@@ -142,21 +160,19 @@ class BaseBrowser(Keymap):
         "Super-Alt-i": "Ctrl-Shift-i", # open inspector
         "Super-minus": "Ctrl-minus", # zoom out
         "Super-equal": "Ctrl-equal", # zoom in
-        "Super-leftbrace": "Ctrl-leftbrace", # previous tab
-        "Super-rightbrace": "Ctrl-rightbrace", # next tab
 
         "Alt_R-leftbrace": "Alt-left", # go back
         "Alt_R-rightbrace": "Alt-right", # go forward
         "Alt_R-minus": "Ctrl-minus", # zoom out
         "Alt_R-equal": "Ctrl-equal", # zoom in
-        "Alt_R-Shift-rightbrace": "Ctrl-tab", # next tab
         "Alt_R-Shift-leftbrace": "Ctrl-Shift-tab", # previous tab
+        "Alt_R-Shift-rightbrace": "Ctrl-tab", # next tab
     }
 
 class Firefox(BaseBrowser):
     name = "Firefox"
     exact_match = True
-    application = App(only=["firefox"])
+    application = App(only=FIREFOX_BROWSERS)
     remap = BaseBrowser.remap | {
         "Super-Shift-p": "Ctrl-Shift-p", # new private window
     } | {
@@ -185,6 +201,7 @@ class RoamPWA(Keymap):
     application = App(only=["chrome-lflgehidkjooeaeclhaadoefaleoeged-Default"])
     remap = {
         "Ctrl-n": "down",
+        "Ctrl-p": "up",
     }
 
 class RoamViewerPWA(Chrome):
