@@ -20,6 +20,9 @@ APPLE_KEYBOARDS = [
 ]
 
 TERMINALS = ["org.wezfurlong.wezterm", "kitty", "com.mitchellh.ghostty"]
+
+ROAM_RESEARCH_PWA = "chrome-lflgehidkjooeaeclhaadoefaleoeged-Default"
+
 FIREFOX_BROWSERS = ["firefox"]
 CHROME_BROWSERS = ["chromium", "google-chrome"]
 ALL_BROWSERS = FIREFOX_BROWSERS + CHROME_BROWSERS
@@ -125,7 +128,8 @@ class ClipboardBindings(Keymap):
     name = "Clipboard bindings"
     exact_match = True
     # Exclude terminal emulators from clipboard bindings since they often have bespoke clipboard shortcuts
-    application = App(not_=TERMINALS)
+    # Exclude Roam Research PWA since it uses a custom paste launch action
+    application = App(not_=(TERMINALS + [ROAM_RESEARCH_PWA]))
     remap = {
         "Super-c": "Ctrl-c", # copy
         "Super-v": "Ctrl-v", # paste
@@ -202,10 +206,11 @@ class Chrome(BaseBrowser):
 class RoamPWA(Keymap):
     name = "Roam  Research (Chrome PWA)"
     exact_match = True
-    application = App(only=["chrome-lflgehidkjooeaeclhaadoefaleoeged-Default"])
+    application = App(only=[ROAM_RESEARCH_PWA])
     remap = {
         "Ctrl-n": "down",
         "Ctrl-p": "up",
+        "Super-v": ["launch", "/home/saurabh/code/custompaste-niri/target/release/custompaste-niri", "roam-paste"],
     }
 
 class RoamViewerPWA(Chrome):

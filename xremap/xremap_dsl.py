@@ -47,6 +47,15 @@ class NoAliasDumper(yaml.SafeDumper):
     def ignore_aliases(self, data):
         return True
 
+class FlowList(list):
+    """Custom list type to tell the YAML dumper to output elements in a single line [like, this]"""
+    pass
+
+def flow_list_rep(dumper, data):
+    return dumper.represent_sequence(u'tag:yaml.org,2002:seq', data, flow_style=True)
+
+NoAliasDumper.add_representer(FlowList, flow_list_rep)
+
 def normalize_shortcut(shortcut):
     parts = shortcut.split('-')
     if len(parts) == 1:
@@ -255,7 +264,11 @@ def generate_html_docs(filename="shortcuts.html"):
                     
                     const actionSpan = document.createElement('span');
                     actionSpan.className = 'shortcut-action';
-                    actionSpan.textContent = Array.isArray(action) ? action.join(' + ') : action;
+                    if (Array.isArray(action) && action.length > 0 && action[0] === 'launch') {{
+                        actionSpan.textContent = 'launch: ' + action.slice(1).join(' ');
+                    }} else {{
+                        actionSpan.textContent = Array.isArray(action) ? action.join(' + ') : action;
+                    }}
                     
                     itemDiv.appendChild(keySpan);
                     itemDiv.appendChild(actionSpan);
@@ -327,7 +340,16 @@ def compile_config(filename, html_filename="shortcuts.html"):
         if hasattr(cls, 'exact_match') and cls.exact_match is not None: k['exact_match'] = cls.exact_match
         if hasattr(cls, 'application') and cls.application: k['application'] = cls.application.to_dict()
         if hasattr(cls, 'device') and cls.device: k['device'] = cls.device.to_dict()
-        if hasattr(cls, 'remap') and cls.remap: k['remap'] = cls.remap
+        if hasattr(cls, 'remap') and cls.remap:
+            processed_remap = {}
+            for key, val in cls.remap.items():
+                # Intercept ["launch", ...] arrays to output as single-line 'launch: [args]' in YAML
+                if isinstance(val, list) and len(val) > 0 and val[0] == "launch":
+                    processed_remap[key] = {"launch": FlowList(val[1:])}
+                else:
+                    processed_remap[key] = val
+            k['remap'] = processed_remap
+            
         if k: keymaps_out.append(k)
         
     if keymaps_out:
