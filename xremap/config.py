@@ -73,6 +73,8 @@ MAC_TEXT_NAVIGATION = {
 
     "Super-left": "home",
     "Super-right": "end",
+    "Super-up": "Ctrl-home",
+    "Super-down": "Ctrl-end",
 
     "Super-Shift-left": "Shift-home",
     "Super-Shift-right": "Shift-end",
@@ -184,6 +186,7 @@ class Chrome(BaseBrowser):
     exact_match = True
     application = App(only=CHROME_BROWSERS)
     remap = BaseBrowser.remap | {
+        "Super-j": "Ctrl-j", # open downloads page
         "Super-comma": "Ctrl-Shift-comma", # open settings
 
         "Super-Shift-a": "Ctrl-Shift-a", # search tabs
