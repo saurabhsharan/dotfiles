@@ -197,6 +197,7 @@ class Chrome(BaseBrowser):
         "Super-Shift-c": "Ctrl-Shift-c", # select element to inspect
         "Super-shift-j": "Ctrl-j", # open downloads page
         "Super-Shift-n": "Ctrl-Shift-n", # new incognito window
+        "Super-Shift-w": "Ctrl-Shift-w", # close window
 
         "Alt-Super-b": "Ctrl-Shift-o", # open bookmarks
     } | {
