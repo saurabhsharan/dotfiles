@@ -230,5 +230,15 @@ class ChatWise(Keymap):
         "Super-slash": "Ctrl-slash", # model switcher
     }
 
+class Dolphin(Keymap):
+    name = "Dolphin"
+    exact_match = True
+    application = App(only=["org.kde.dolphin"])
+    remap = {
+        # unmap the Emacs bindings back to the original shortcuts so Dolphin can use them (we can still use Super+Up/Down)
+        "Alt-up": "Alt-up",
+        "Alt-down": "Alt-down",
+    }
+
 if __name__ == "__main__":
     compile_config("config.yml")
