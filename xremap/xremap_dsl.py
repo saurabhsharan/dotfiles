@@ -137,6 +137,14 @@ def check_conflicts():
     else:
         print(f"❌ Found {conflicts_found} potential conflict(s) and {duplicates_found} duplicate(s). Please review them.\n")
 
+def get_specificity(cls):
+    """Calculates how specific a keymap is (lower number = more specific)"""
+    scope = getattr(cls, 'application', None)
+    if not scope: return (3, 0)
+    if scope.only: return (1, len(scope.only))
+    if scope.not_: return (2, -len(scope.not_))
+    return (3, 0)
+
 def generate_html_docs(filename="shortcuts.html"):
     apps = set()
     for cls in _keymaps:
@@ -161,13 +169,6 @@ def generate_html_docs(filename="shortcuts.html"):
     
     app_data["All Apps"] = global_data
     
-    def get_specificity(cls):
-        scope = getattr(cls, 'application', None)
-        if not scope: return (3, 0)
-        if scope.only: return (1, len(scope.only))
-        if scope.not_: return (2, -len(scope.not_))
-        return (3, 0)
-        
     sorted_keymaps = sorted(_keymaps, key=get_specificity)
     
     for app in apps:
@@ -334,7 +335,8 @@ def compile_config(filename, html_filename="shortcuts.html"):
         config['modmap'] = modmaps_out
 
     keymaps_out = []
-    for cls in _keymaps:
+    # Sort _keymaps so specific ones appear at the top of the YAML for xremap matching order
+    for cls in sorted(_keymaps, key=get_specificity):
         k = {}
         if hasattr(cls, 'name') and cls.name: k['name'] = cls.name
         if hasattr(cls, 'exact_match') and cls.exact_match is not None: k['exact_match'] = cls.exact_match
