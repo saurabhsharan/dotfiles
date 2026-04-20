@@ -217,6 +217,11 @@ class RoamViewerPWA(Chrome):
     name = "Roam Viewer (Chrome PWA)"
     exact_match = True
     application = App(only=["chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default", "chrome-nmhgeifmehldnegmaackjamblpjkcpmh-Default"])
+    remap = Chrome.remap | {
+        # restore to original bindings since Alt+Up/Down used to traverse blocks up/down
+        "Alt-up": "Alt-up",
+        "Alt-down": "Alt-down",
+    }
 
 class ChatWise(Keymap):
     name = "ChatWise"
