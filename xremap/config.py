@@ -115,6 +115,8 @@ class GlobalBindings(Keymap):
     remap = MAC_TEXT_NAVIGATION | {
         "Ctrl-i": "up",
         "Ctrl-j": "down",
+
+        "Super-z": "Ctrl-z", # undo
     }
 
 class EmacsBindings(Keymap):
@@ -211,7 +213,10 @@ class RoamPWA(Keymap):
     remap = {
         "Ctrl-n": "down",
         "Ctrl-p": "up",
+
         "Super-v": ["launch", "/home/saurabh/code/custompaste-niri/target/release/custompaste-niri", "roam-paste"],
+        "Super-c": "Ctrl-c", # copy
+        "Super-x": "Ctrl-x", # cut
     }
 
 class RoamViewerPWA(Chrome):
@@ -219,9 +224,10 @@ class RoamViewerPWA(Chrome):
     exact_match = True
     application = App(only=["chrome-jcgpenhgafmhijpfmgmlcacapeaofcdf-Default", "chrome-nmhgeifmehldnegmaackjamblpjkcpmh-Default"])
     remap = Chrome.remap | {
-        # restore to original bindings since Alt+Up/Down used to traverse blocks up/down
+        # restore to original bindings since Alt+Up/Down traverses blocks up/down and Alt+Left navigates back
         "Alt-up": "Alt-up",
         "Alt-down": "Alt-down",
+        "Alt-left": "Alt-left",
     }
 
 class ChatWise(Keymap):
