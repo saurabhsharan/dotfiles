@@ -22,9 +22,10 @@ APPLE_KEYBOARDS = [
 TERMINALS = ["org.wezfurlong.wezterm", "kitty", "com.mitchellh.ghostty"]
 
 ROAM_RESEARCH_PWA = "chrome-lflgehidkjooeaeclhaadoefaleoeged-Default"
+STANDARD_NOTES_PWA = "chrome-odlljlegmneadncjjedmednehljppelb-Default"
 
 FIREFOX_BROWSERS = ["firefox"]
-CHROME_BROWSERS = ["chromium", "google-chrome"]
+CHROME_BROWSERS = ["chromium", "chromium-browser", "google-chrome"]
 ALL_BROWSERS = FIREFOX_BROWSERS + CHROME_BROWSERS
 
 # ==========================================
@@ -199,6 +200,7 @@ class Chrome(BaseBrowser):
         "Super-Shift-c": "Ctrl-Shift-c", # select element to inspect
         "Super-shift-j": "Ctrl-j", # open downloads page
         "Super-Shift-n": "Ctrl-Shift-n", # new incognito window
+        "Super-Shift-r": "Ctrl-Shift-r", # force refresh
         "Super-Shift-w": "Ctrl-Shift-w", # close window
 
         "Alt-Super-b": "Ctrl-Shift-o", # open bookmarks
@@ -214,9 +216,27 @@ class RoamPWA(Keymap):
         "Ctrl-n": "down",
         "Ctrl-p": "up",
 
+        # use paragraph bindings in forked version of Chromium
+        "Alt-up": "Ctrl-up",
+        "Alt-down": "Ctrl-down",
+        "Alt-Shift-up": "Ctrl-Shift-up",
+        "Alt-Shift-down": "Alt-Shift-down",
+
         "Super-v": ["launch", "/home/saurabh/code/custompaste-niri/target/release/custompaste-niri", "roam-paste"],
         "Super-c": "Ctrl-c", # copy
         "Super-x": "Ctrl-x", # cut
+    }
+
+class StandardNotesPWA(Keymap):
+    name = "Standard Notes (Chrome PWA)"
+    exact_match = True
+    application = App(only=[STANDARD_NOTES_PWA])
+    remap = {
+        # use paragraph bindings in forked version of Chromium
+        "Alt-up": "Ctrl-up",
+        "Alt-down": "Ctrl-down",
+        "Alt-Shift-up": "Ctrl-Shift-up",
+        "Alt-Shift-down": "Alt-Shift-down",
     }
 
 class RoamViewerPWA(Chrome):
