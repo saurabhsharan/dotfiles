@@ -248,6 +248,8 @@ class RoamViewerPWA(Chrome):
         "Alt-up": "Alt-up",
         "Alt-down": "Alt-down",
         "Alt-left": "Alt-left",
+        # Alt+Shift+B is used to toggle search option
+        "Alt-Shift-b": "Alt-Shift-b",
     }
 
 class ChatWise(Keymap):
