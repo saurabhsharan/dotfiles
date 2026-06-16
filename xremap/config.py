@@ -158,6 +158,7 @@ class BaseBrowser(Keymap):
         "Super-Shift-g": "Ctrl-Shift-g", # jump to previous match
         "Super-l": "Ctrl-l", # focus address bar
         "Super-n": "Ctrl-n", # new window
+        "Super-o": "Ctrl-o", # open
         "Super-r": "Ctrl-r", # refresh
         "Super-t": "Ctrl-t", # new tab
         "Super-w": "Ctrl-f4", # close tab
@@ -194,9 +195,11 @@ class Chrome(BaseBrowser):
     application = App(only=CHROME_BROWSERS)
     remap = BaseBrowser.remap | {
         "Super-j": "Ctrl-j", # open downloads page
+        "Super-k": "Ctrl-Shift-k", # command palette on some web apps (e.g. Linear, GitHub)
         "Super-comma": "Ctrl-Shift-comma", # open settings
 
         "Super-Shift-a": "Ctrl-Shift-a", # search tabs
+        "Super-Shift-b": "Ctrl-Shift-b", # toggle bookmarks bar
         "Super-Shift-c": "Ctrl-Shift-c", # select element to inspect
         "Super-shift-j": "Ctrl-j", # open downloads page
         "Super-Shift-n": "Ctrl-Shift-n", # new incognito window
@@ -250,6 +253,8 @@ class RoamViewerPWA(Chrome):
         "Alt-left": "Alt-left",
         # Alt+Shift+B is used to toggle search option
         "Alt-Shift-b": "Alt-Shift-b",
+        # restore to original since RoamViewerPWA handles Super+K correctly on Linux
+        "Super-k": "Super-k",
     }
 
 class ChatWise(Keymap):
